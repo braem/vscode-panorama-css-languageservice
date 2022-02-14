@@ -66,7 +66,7 @@ suite('LESS - Completions', () => {
 		});
 		await testCompletionFor('.btn-group { .btn:| }', {
 			items: [
-				{ label: '::after', resultText: '.btn-group { .btn::after }' }
+				//{ label: '::after', resultText: '.btn-group { .btn::after }' }
 			]
 		});
 		await testCompletionFor('.foo { &:|', {

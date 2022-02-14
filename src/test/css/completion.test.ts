@@ -203,62 +203,56 @@ suite('CSS - Completion', () => {
 	test('selectors', async function () {
 		await testCompletionFor('a:h| ', {
 			items: [
-				{ label: ':hover', resultText: 'a:hover ' },
-				{ label: '::after', resultText: 'a::after ' }
+				{ label: ':hover', resultText: 'a:hover ' }
 			]
 		});
 		await testCompletionFor('a::h| ', {
 			items: [
-				{ label: ':hover', resultText: 'a:hover ' },
-				{ label: '::after', resultText: 'a::after ' }
+				{ label: ':hover', resultText: 'a:hover ' }
 			]
 		});
 		await testCompletionFor('a::| ', {
 			items: [
-				{ label: ':hover', resultText: 'a:hover ' },
-				{ label: '::after', resultText: 'a::after ' }
+				{ label: ':hover', resultText: 'a:hover ' }
 			]
 		});
 		await testCompletionFor('a:| ', {
 			items: [
-				{ label: ':hover', resultText: 'a:hover ' },
-				{ label: '::after', resultText: 'a::after ' }
+				{ label: ':hover', resultText: 'a:hover ' }
 			]
 		});
 		await testCompletionFor('a:|hover ', {
 			items: [
-				{ label: ':hover', resultText: 'a:hover ' },
-				{ label: '::after', resultText: 'a::after ' }
+				{ label: ':hover', resultText: 'a:hover ' }
 			]
 		});
 		await testCompletionFor('a::| foo { }', { // #104111
 			items: [
-				{ label: ':hover', resultText: 'a:hover foo { }' },
-				{ label: '::after', resultText: 'a::after foo { }' }
+				{ label: ':hover', resultText: 'a:hover foo { }' }
 			]
 		});
 		await testCompletionFor('a:| foo { }', { // #104111
 			items: [
-				{ label: ':hover', resultText: 'a:hover foo { }' },
-				{ label: '::after', resultText: 'a::after foo { }' }
+				{ label: ':hover', resultText: 'a:hover foo { }' }
+				//{ label: '::after', resultText: 'a::after foo { }' }
 			]
 		});
 		await testCompletionFor('a#| ', {
 			items: [
-				{ label: ':hover', resultText: 'a:hover ' },
-				{ label: '::after', resultText: 'a::after ' }
+				{ label: ':hover', resultText: 'a:hover ' }
+				//{ label: '::after', resultText: 'a::after ' }
 			]
 		});
 		await testCompletionFor('a.| ', {
 			items: [
-				{ label: ':hover', resultText: 'a:hover ' },
-				{ label: '::after', resultText: 'a::after ' }
+				{ label: ':hover', resultText: 'a:hover ' }
+				//{ label: '::after', resultText: 'a::after ' }
 			]
 		});
 		await testCompletionFor('.a:| ', {
 			items: [
-				{ label: ':hover', resultText: '.a:hover ' },
-				{ label: '::after', resultText: '.a::after ' }
+				{ label: ':hover', resultText: '.a:hover ' }
+				//{ label: '::after', resultText: '.a::after ' }
 			]
 		});
 	});

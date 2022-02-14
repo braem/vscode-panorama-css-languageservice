@@ -95,8 +95,8 @@ suite('SCSS - Completions', () => {
 		// issue microsoft/vscode#109185
 		await testCompletionFor('.test { &::|  }', {
 			items: [
-				{ label: ':hover', resultText: '.test { &:hover  }' },
-				{ label: '::after', resultText: '.test { &::after  }' }
+				{ label: ':hover', resultText: '.test { &:hover  }' }
+				//{ label: '::after', resultText: '.test { &::after  }' }
 			]
 		});
 		// issue microsoft/vscode#33911

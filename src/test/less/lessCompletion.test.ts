@@ -21,20 +21,9 @@ function testCompletionFor(
 
 suite('LESS - Completions', () => {
 	test('stylesheet', async () => {
-		await testCompletionFor('body { |', {
-			items: [
-				{ label: 'display' },
-				{ label: 'background' }
-			]
-		});
 		await testCompletionFor('body { ver|', {
 			items: [
 				{ label: 'vertical-align' }
-			]
-		});
-		await testCompletionFor('body { word-break: |', {
-			items: [
-				{ label: 'keep-all' }
 			]
 		});
 		await testCompletionFor('body { inner { vertical-align: |}', {
@@ -72,27 +61,6 @@ suite('LESS - Completions', () => {
 		await testCompletionFor('.foo { &:d|', {
 			items: [
 				{ label: ':disabled', resultText: '.foo { &:disabled' }
-			]
-		});
-		await testCompletionFor('.foo { appearance:| }', {
-			items: [
-				{
-					label: 'inherit', resultText: '.foo { appearance:inherit }'
-				}
-			]
-		});
-		await testCompletionFor('.foo { mask: no|', { // bug 76572
-			items: [
-				{ label: 'round' }
-			]
-		});
-	});
-
-	// https://github.com/Microsoft/vscode/issues/71791
-	test('Items that start with `-` are sorted lower than normal attribute values', async () => {
-		await testCompletionFor('.foo { display: | }', {
-			items: [
-				{ label: 'grid', sortText: ' ' },
 			]
 		});
 	});

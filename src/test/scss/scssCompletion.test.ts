@@ -60,26 +60,10 @@ suite('SCSS - Completions', () => {
 				{ label: 'mixin', resultText: '@mixin mixin($a: 1, $b) { content: $a + $b; } @include mixin(${1:$a}, ${2:$b})' }
 			]
 		});
-		await testCompletionFor('di| span { } ', {
-			items: [
-				{ label: 'div' },
-				{ label: 'display', notAvailable: true }
-			]
-		});
-		await testCompletionFor('span { di|} ', {
-			items: [
-				{ notAvailable: true, label: 'div' },
-				{ label: 'display' }
-			]
-		});
 		await testCompletionFor('.foo { .|', {
 			items: [
 				{ label: '.foo' }
 			]
-		});
-		// issue #250
-		await testCompletionFor('.foo { display: block;|', {
-			count: 0
 		});
 		await testCompletionFor('.foo { &:d|', {
 			items: [
@@ -93,12 +77,6 @@ suite('SCSS - Completions', () => {
 				//{ label: '::after', resultText: '.test { &::after  }' }
 			]
 		});
-		// issue microsoft/vscode#33911
-		await testCompletionFor('@include media(\'ddd\') { dis| &:not(:first-child) {', {
-			items: [
-				{ label: 'display' }
-			]
-		});
 		// issue 43876
 		await testCompletionFor('.foo { } @mixin bar { @extend | }', {
 			items: [
@@ -108,23 +86,6 @@ suite('SCSS - Completions', () => {
 		await testCompletionFor('.foo { } @mixin bar { @extend fo| }', {
 			items: [
 				{ label: '.foo' }
-			]
-		});
-		// issue 76572
-		await testCompletionFor('.foo { mask: no|', {
-			items: [
-				{ label: 'round' }
-			]
-		});
-		// issue 76507
-		await testCompletionFor('.foo { .foobar { .foobar2 {  outline-color: blue; cool  }| } .fokzlb {} .baaaa { counter - reset: unset;}', {
-			items: [
-				{ label: 'display' }
-			]
-		});
-		await testCompletionFor('div { &:hover { } | }', {
-			items: [
-				{ label: 'display' }
 			]
 		});
 	});

@@ -77,36 +77,18 @@ suite('CSS - Lint', () => {
 		assertRuleSet('selector {}', Rules.EmptyRuleSet);
 	});
 
-	test('properies ignored due to inline ', function () {
-		assertRuleSet('selector { display: inline; float: right; }', Rules.AvoidFloat);
-		assertRuleSet('selector { display: inline; float: none; }', Rules.AvoidFloat);
-		assertRuleSet('selector { display: inline-block; float: right; }', Rules.PropertyIgnoredDueToDisplay, Rules.AvoidFloat);
-		assertRuleSet('selector { display: inline-block; float: none; }', Rules.AvoidFloat);
-		assertRuleSet('selector { display: block; vertical-align: center; }', Rules.PropertyIgnoredDueToDisplay);
-		assertRuleSet('selector { display: inline-block; float: none !important; }', Rules.AvoidFloat, Rules.AvoidImportant);
-	});
-
 	test('avoid !important', function () {
-		assertRuleSet('selector { display: inline !important; }', Rules.AvoidImportant);
-	});
-
-	test('avoid float', function () {
-		assertRuleSet('selector { float: right; }', Rules.AvoidFloat);
+		assertRuleSet('selector { z-index: 2 !important; }', Rules.AvoidImportant);
 	});
 
 	test('avoid id selectors', function () {
-		assertRuleSet('#selector {  display: inline; }', Rules.AvoidIdSelector);
+		assertRuleSet('#selector { z-index: 2; }', Rules.AvoidIdSelector);
 	});
 
 	test('zero with unit', function () {
 		assertRuleSet('selector { width: 0px }', Rules.ZeroWithUnit);
 		assertRuleSet('selector { width: 0Px }', Rules.ZeroWithUnit);
-		assertRuleSet('selector { line-height: 0EM }', Rules.ZeroWithUnit);
-		assertRuleSet('selector { line-height: 0pc }', Rules.ZeroWithUnit);
-		assertRuleSet('selector { outline: black 0em solid; }', Rules.ZeroWithUnit);
-		assertRuleSet('selector { grid-template-columns: 40px 50px auto 0px 40px; }', Rules.ZeroWithUnit);
 		assertRuleSet('selector { min-height: 0% }');
-		assertRuleSet('selector { top: calc(0px - 10vw); }'); // issue 46997
 	});
 
 	test('duplicate declarations', function () {
@@ -214,9 +196,6 @@ suite('CSS - Lint', () => {
 		assertRuleSet('.mybox { height: 100px;         padding: 1px 0;            }', Rules.BewareOfBoxModelSize, Rules.BewareOfBoxModelSize);
 		assertRuleSet('.mybox { height: 100px;         padding: 0 0 1px;          }', Rules.BewareOfBoxModelSize, Rules.BewareOfBoxModelSize);
 
-		// box-sizing supress errors
-		assertRuleSet('.mybox { height: 100px;         border: 1px;               box-sizing: border-box; }');
-
 		// property be overriden
 		assertRuleSet('.mybox { height: 100px;         border: 1px;               border-top: 0; border-bottom: 0; }');
 
@@ -224,11 +203,6 @@ suite('CSS - Lint', () => {
 		assertRuleSet('.mybox { padding:; }');
 		assertRuleSet('.mybox { border: ');
 		assertRuleSet('.mybox { height: 100px;         padding: 1px;              border: }', Rules.BewareOfBoxModelSize, Rules.BewareOfBoxModelSize);
-	});
-
-	test('IE hacks', function () {
-		assertRuleSet('selector { display: inline-block; *display: inline; }', Rules.IEStarHack);
-		assertRuleSet('selector { background: #00f; /* all browsers including Mac IE */ *background: #f00; /* IE 7 and below */ _background: #f60; /* IE 6 and below */  }', Rules.IEStarHack, Rules.IEStarHack);
 	});
 
 	test('vendor specific prefixes', function () {

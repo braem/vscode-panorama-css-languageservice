@@ -75,29 +75,7 @@ suite('CSS - Language Facts', () => {
 	const cssDataManager = new CSSDataManager({ useDefaultDataProvider: true });
 
 	test('properties', function () {
-		let alignLast = cssDataManager.getProperty('text-align-last');
-		if (!alignLast) {
-			assert.ok(alignLast);
-			return;
-		}
-		assert.equal(alignLast.name, 'text-align-last');
-
-		assert.ok(alignLast.browsers!.indexOf("E12") !== -1);
-		assert.ok(alignLast.browsers!.indexOf("FF49") !== -1);
-		assert.ok(alignLast.browsers!.indexOf("C47") !== -1);
-		assert.ok(alignLast.browsers!.indexOf("IE5.5") !== -1);
-		assert.ok(alignLast.browsers!.indexOf("O34") !== -1);
-
-		assert.equal(getBrowserLabel(alignLast.browsers!), 'Edge 12, Firefox 49, Chrome 47, IE 5, Opera 34');
-
-		let r = alignLast.restrictions;
-
-		assert.equal(r!.length, 1);
-		assert.equal(r![0], 'enum');
-
-		let v = alignLast.values;
-		assert.equal(v!.length, 5);
-		assert.equal(v![0].name, 'auto');
+		
 	});
 
 	test('is color', function () {

@@ -63,12 +63,11 @@ suite('CSS - Code Actions', () => {
 	};
 
 	test('Unknown Properties', async function () {
-		testCodeActions('body { /*here*/displai: inline }', '/*here*/', [
-			{ title: 'Rename to \'display\'', content: 'body { /*here*/display: inline }' }
+		testCodeActions('body { /*here*/vertical-aligm: inline }', '/*here*/', [
+			{ title: 'Rename to \'vertical-align\'', content: 'body { /*here*/vertical-align: inline }' }
 		]);
 		testCodeActions('body { /*here*/background-colar: red }', '/*here*/', [
 			{ title: 'Rename to \'background-color\'', content: 'body { /*here*/background-color: red }' },
-			{ title: 'Rename to \'background-clip\'', content: 'body { /*here*/background-clip: red }' },
 			{ title: 'Rename to \'background-image\'', content: 'body { /*here*/background-image: red }' }
 		]);
 	});

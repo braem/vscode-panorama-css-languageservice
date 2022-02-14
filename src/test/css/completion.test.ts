@@ -191,12 +191,6 @@ suite('CSS - Completion', () => {
 				{ label: 'html', resultText: 'html {' }
 			]
 		});
-		await testCompletionFor('.foo |{ ', {
-			items: [
-				{ label: 'html', resultText: '.foo html{ ' },
-				{ notAvailable: true, label: 'display' }
-			]
-		});
 	});
 	test('selectors', async function () {
 		await testCompletionFor('a:h| ', {
@@ -257,8 +251,8 @@ suite('CSS - Completion', () => {
 	test('properties', async function () {
 		await testCompletionFor('body {|', {
 			items: [
-				{ label: 'display', resultText: 'body {display: ' },
-				{ label: 'background', resultText: 'body {background: ' }
+				{ label: 'text-align', resultText: 'body {text-align: ' },
+				{ label: 'background-color', resultText: 'body {background-color: ' }
 			]
 		});
 		await testCompletionFor('body { ver|', {
@@ -284,14 +278,6 @@ suite('CSS - Completion', () => {
 		await testCompletionFor('body { trans| ', {
 			items: [
 				{ label: 'transition', resultText: 'body { transition:  ' }
-			]
-		});
-	});
-	test('MDN properties', async function () {
-		await testCompletionFor('body { m|', {
-			items: [
-				{ label: 'mask', resultText: 'body { mask: ' },
-				{ label: 'mask-border', resultText: 'body { mask-border: ' }
 			]
 		});
 	});
@@ -338,22 +324,7 @@ suite('CSS - Completion', () => {
 		});
 		await testCompletionFor('body { vertical-align: bottom; |}', {
 			items: [
-				{ label: 'display', resultText: 'body { vertical-align: bottom; display: }' }
-			]
-		});
-		await testCompletionFor('.head { background-image: |}', {
-			items: [
-				{ label: 'url()', resultText: '.head { background-image: url($1)}' }
-			]
-		});
-		await testCompletionFor('#id { justify-content: |', {
-			items: [
-				{ label: 'center', resultText: '#id { justify-content: center' },
-				{ label: 'start', resultText: '#id { justify-content: start' },
-				{ label: 'end', resultText: '#id { justify-content: end' },
-				{ label: 'left', resultText: '#id { justify-content: left' },
-				{ label: 'right', resultText: '#id { justify-content: right' },
-				{ label: 'space-evenly', resultText: '#id { justify-content: space-evenly' }
+				{ label: 'text-align', resultText: 'body { vertical-align: bottom; text-align: }' }
 			]
 		});
 		await testCompletionFor('.foo { te:n| }', {
@@ -398,9 +369,9 @@ suite('CSS - Completion', () => {
 				{ label: '10cm', resultText: 'body { vertical-align: 10cm }' }
 			]
 		});
-		await testCompletionFor('body { top: -2px| }', {
+		await testCompletionFor('body { margin-left: -2px| }', {
 			items: [
-				{ label: '-2px', resultText: 'body { top: -2px }' }
+				{ label: '-2px', resultText: 'body { margin-left: -2px }' }
 			]
 		});
 	});
@@ -475,39 +446,6 @@ suite('CSS - Completion', () => {
 		await testCompletionFor('body { border-left: --borderwidth; border-right: var(| ', {
 			items: [
 				{ label: '--borderwidth', documentation: undefined, resultText: 'body { border-left: --borderwidth; border-right: var(--borderwidth ' },
-			]
-		});
-	});
-	test('support', async function () {
-		await testCompletionFor('@supports (display: flex) { |', {
-			items: [
-				{ label: 'html', resultText: '@supports (display: flex) { html' },
-				{ label: 'display', notAvailable: true }
-			]
-		});
-		await testCompletionFor('@supports (| ) { }', {
-			items: [
-				{ label: 'display', resultText: '@supports (display:  ) { }' },
-			]
-		});
-		await testCompletionFor('@supports (di| ) { }', {
-			items: [
-				{ label: 'display', resultText: '@supports (display:  ) { }' },
-			]
-		});
-		await testCompletionFor('@supports (display: | ) { }', {
-			items: [
-				{ label: 'flex', resultText: '@supports (display: flex ) { }' },
-			]
-		});
-		await testCompletionFor('@supports (display: flex ) | { }', {
-			items: [
-				{ label: 'display', notAvailable: true },
-			]
-		});
-		await testCompletionFor('@supports |(display: flex ) { }', {
-			items: [
-				{ label: 'display', notAvailable: true },
 			]
 		});
 	});
@@ -588,58 +526,35 @@ suite('CSS - Completion', () => {
 		});
 		await testCompletionFor('body { disp| ', {
 			items: [
-				{ label: 'display', resultText: 'body { display:  ', command: { title: 'Suggest', command: 'editor.action.triggerSuggest' } }
+				{ label: 'min-height', resultText: 'body { min-height:  ', command: { title: 'Suggest', command: 'editor.action.triggerSuggest' } }
 			]
 		});
-		await testCompletionFor('body { disp| ', {
+		await testCompletionFor('body { min-he| ', {
 			items: [
-				{ label: 'display', resultText: 'body { display: $0; ', command: { title: 'Suggest', command: 'editor.action.triggerSuggest' } }
+				{ label: 'min-height', resultText: 'body { min-height: $0; ', command: { title: 'Suggest', command: 'editor.action.triggerSuggest' } }
 			]
 		}, {});
-		await testCompletionFor('body { disp| ', {
+		await testCompletionFor('body { min-he| ', {
 			items: [
-				{ label: 'display', resultText: 'body { display: $0; ', command: { title: 'Suggest', command: 'editor.action.triggerSuggest' } }
+				{ label: 'min-height', resultText: 'body { min-height: $0; ', command: { title: 'Suggest', command: 'editor.action.triggerSuggest' } }
 			]
 		}, { completion: undefined });
-		await testCompletionFor('body { disp| ', {
+		await testCompletionFor('body { min-he| ', {
 			items: [
-				{ label: 'display', resultText: 'body { display: $0; ', command: { title: 'Suggest', command: 'editor.action.triggerSuggest' } }
+				{ label: 'min-height', resultText: 'body { min-height: $0; ', command: { title: 'Suggest', command: 'editor.action.triggerSuggest' } }
 			]
 		}, { completion: { triggerPropertyValueCompletion: true } });
-		await testCompletionFor('body { disp| ', {
+		await testCompletionFor('body { min-he| ', {
 			items: [
-				{ label: 'display', resultText: 'body { display: $0; ', command: undefined }
+				{ label: 'min-height', resultText: 'body { min-height: $0; ', command: undefined }
 			]
 		}, { completion: { triggerPropertyValueCompletion: false } });
 
-		await testCompletionFor('body { disp| ', {
+		await testCompletionFor('body { min-he| ', {
 			items: [
-				{ label: 'display', resultText: 'body { display:  ', command: undefined }
+				{ label: 'min-height', resultText: 'body { min-height:  ', command: undefined }
 			]
 		}, { completion: { triggerPropertyValueCompletion: false, completePropertyWithSemicolon: false } });
-	});
-
-	test('Completion description should include status, browser compat and references', async () => {
-		await testCompletionFor('.foo { | }', {
-			items: [
-				{
-					label: 'text-decoration-skip',
-					documentation: {
-						kind: 'markdown',
-						value:
-							'⚠️ Property is experimental. Be cautious when using it.️\n\nThe text\\-decoration\\-skip CSS property specifies what parts of the element’s content any text decoration affecting the element must skip over\\. It controls all text decoration lines drawn by the element and also any text decoration lines drawn by its ancestors\\.\n\n(Safari 12, Chrome 57, Opera 44)\n\nSyntax: none | \\[ objects || \\[ spaces | \\[ leading\\-spaces || trailing\\-spaces \\] \\] || edges || box\\-decoration \\]\n\n[MDN Reference](https://developer.mozilla.org/docs/Web/CSS/text-decoration-skip)'
-					}
-				},
-				{
-					label: 'box-ordinal-group',
-					documentation: {
-						kind: 'markdown',
-						value:
-							'🚨️ Property is nonstandard. Avoid using it.\n\nThe box\\-ordinal\\-group CSS property assigns the flexbox\'s child elements to an ordinal group\\.\n\n(Edge 12, Firefox 1, Safari 3, Chrome 1, Opera 15)\n\nSyntax: &lt;integer&gt;\n\n[MDN Reference](https://developer.mozilla.org/docs/Web/CSS/box-ordinal-group)'
-					}
-				}
-			]
-		});
 	});
 
 	test(`Color swatch for variables that's color`, async () => {
@@ -749,18 +664,6 @@ suite('CSS - Completion', () => {
 				}
 			]
 		}, { completion: { triggerPropertyValueCompletion: true, completePropertyWithSemicolon: true } });
-	});
-
-	// https://github.com/Microsoft/vscode/issues/71791
-	test('Items that start with `-` are sorted lower than normal attribute values', async () => {
-		await testCompletionFor('.foo { display: | }', {
-			items: [
-				// Enum with no prefix come before everything
-				{ label: 'grid', sortText: ' ' },
-				// Others come last
-				{ label: 'inherit', sortText: undefined }
-			]
-		});
 	});
 
 	test('Properties sorted by relevance', async () => {

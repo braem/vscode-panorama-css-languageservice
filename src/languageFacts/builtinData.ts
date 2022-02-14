@@ -116,12 +116,12 @@ export const basicShapeFunctions: { [name: string]: string } = {
 };
 
 export const units: { [unitName: string]: string[] } = {
-	'length': ['em', 'rem', 'ex', 'px', 'cm', 'mm', 'in', 'pt', 'pc', 'ch', 'vw', 'vh', 'vmin', 'vmax'],
+	'length': ['px'],
 	'angle': ['deg', 'rad', 'grad', 'turn'],
 	'time': ['ms', 's'],
 	'frequency': ['Hz', 'kHz'],
 	'resolution': ['dpi', 'dpcm', 'dppx'],
-	'percentage': ['%', 'fr']
+	'percentage': ['%']
 };
 
 export const html5Tags = ['a', 'abbr', 'address', 'area', 'article', 'aside', 'audio', 'b', 'base', 'bdi', 'bdo', 'blockquote', 'body', 'br', 'button', 'canvas', 'caption',

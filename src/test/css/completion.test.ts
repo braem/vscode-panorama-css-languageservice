@@ -284,14 +284,12 @@ suite('CSS - Completion', () => {
 	test('values', async function () {
 		await testCompletionFor('body { vertical-align:| bottom;}', {
 			items: [
-				{ label: 'bottom', resultText: 'body { vertical-align:bottom bottom;}' },
-				{ label: '0cm', resultText: 'body { vertical-align:0cm bottom;}' }
+				{ label: 'bottom', resultText: 'body { vertical-align:bottom bottom;}' }
 			]
 		});
 		await testCompletionFor('body { vertical-align: |bottom;}', {
 			items: [
-				{ label: 'bottom', resultText: 'body { vertical-align: bottom;}' },
-				{ label: '0cm', resultText: 'body { vertical-align: 0cm;}' }
+				{ label: 'bottom', resultText: 'body { vertical-align: bottom;}' }
 			]
 		});
 		await testCompletionFor('body { vertical-align: bott|', {
@@ -349,26 +347,6 @@ suite('CSS - Completion', () => {
 		});
 	});
 	test('units', async function () {
-		await testCompletionFor('body { vertical-align: 9| }', {
-			items: [
-				{ label: '9cm', resultText: 'body { vertical-align: 9cm }' }
-			]
-		});
-		await testCompletionFor('body { vertical-align: 1.2| }', {
-			items: [
-				{ label: '1.2em', resultText: 'body { vertical-align: 1.2em }' }
-			]
-		});
-		await testCompletionFor('body { vertical-align: 1|0 }', {
-			items: [
-				{ label: '1cm', resultText: 'body { vertical-align: 1cm }' }
-			]
-		});
-		await testCompletionFor('body { vertical-align: 10c| }', {
-			items: [
-				{ label: '10cm', resultText: 'body { vertical-align: 10cm }' }
-			]
-		});
 		await testCompletionFor('body { margin-left: -2px| }', {
 			items: [
 				{ label: '-2px', resultText: 'body { margin-left: -2px }' }
@@ -389,19 +367,18 @@ suite('CSS - Completion', () => {
 		await testCompletionFor('body { border-right: |', {
 			items: [
 				{ label: 'cyan', resultText: 'body { border-right: cyan' },
-				{ label: 'dotted', resultText: 'body { border-right: dotted' },
-				{ label: '0em', resultText: 'body { border-right: 0em' }
+				{ label: 'dotted', resultText: 'body { border-right: dotted' }
 			]
 		});
-		await testCompletionFor('body { border-right: cyan| dotted 2em ', {
+		await testCompletionFor('body { border-right: cyan| dotted 2px ', {
 			items: [
-				{ label: 'cyan', resultText: 'body { border-right: cyan dotted 2em ' },
-				{ label: 'darkcyan', resultText: 'body { border-right: darkcyan dotted 2em ' }
+				{ label: 'cyan', resultText: 'body { border-right: cyan dotted 2px ' },
+				{ label: 'darkcyan', resultText: 'body { border-right: darkcyan dotted 2px ' }
 			]
 		});
-		await testCompletionFor('body { border-right: dotted 2em |', {
+		await testCompletionFor('body { border-right: dotted 2px |', {
 			items: [
-				{ label: 'cyan', resultText: 'body { border-right: dotted 2em cyan' }
+				{ label: 'cyan', resultText: 'body { border-right: dotted 2px cyan' }
 			]
 		});
 		await testCompletionFor('.foo { background-color: #123456; } .bar { background-color:| }', {

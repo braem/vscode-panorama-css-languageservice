@@ -98,8 +98,6 @@ suite('LESS - Completions', () => {
 		await testCompletionFor('.foo { display: | }', {
 			items: [
 				{ label: 'grid', sortText: ' ' },
-				{ label: '-moz-grid', sortText: ' x' },
-				{ label: '-ms-grid', sortText: ' x' },
 			]
 		});
 	});

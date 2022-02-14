@@ -219,7 +219,6 @@ suite('CSS - Navigation', () => {
 			assertScopesAndSymbols(ls, '@keyframes animation {}; .class {}', 'animation,.class,[],[]');
 			assertScopesAndSymbols(ls, '@page :pseudo-class { margin:2in; }', '[]');
 			assertScopesAndSymbols(ls, '@media print { body { font-size: 10pt } }', '[body,[]]');
-			assertScopesAndSymbols(ls, '@-moz-keyframes identifier { 0% { top: 0; } 50% { top: 30px; left: 20px; }}', 'identifier,[[],[]]');
 			assertScopesAndSymbols(ls, '@font-face { font-family: "Bitstream Vera Serif Bold"; }', '[]');
 		});
 

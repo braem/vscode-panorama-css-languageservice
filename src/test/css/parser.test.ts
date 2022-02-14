@@ -54,15 +54,11 @@ suite('CSS - Parser', () => {
 		assertNode('<!-- --> @import "string"; <!-- -->', parser, parser._parseStylesheet.bind(parser));
 		assertNode('@media asdsa { } <!-- --> <!-- -->', parser, parser._parseStylesheet.bind(parser));
 		assertNode('@media screen, projection { }', parser, parser._parseStylesheet.bind(parser));
-		assertNode('@media screen and (max-width: 400px) {  @-ms-viewport { width: 320px; }}', parser, parser._parseStylesheet.bind(parser));
-		assertNode('@-ms-viewport { width: 320px; height: 768px; }', parser, parser._parseStylesheet.bind(parser));
 		assertNode('#boo, far {} \n.far boo {}', parser, parser._parseStylesheet.bind(parser));
-		assertNode('@-moz-keyframes darkWordHighlight { from { background-color: inherit; } to { background-color: rgba(83, 83, 83, 0.7); } }', parser, parser._parseStylesheet.bind(parser));
 		assertNode('@page { margin: 2.5cm; }', parser, parser._parseStylesheet.bind(parser));
 		assertNode('@font-face { font-family: "Example Font"; }', parser, parser._parseStylesheet.bind(parser));
 		assertNode('@namespace "http://www.w3.org/1999/xhtml";', parser, parser._parseStylesheet.bind(parser));
 		assertNode('@namespace pref url(http://test);', parser, parser._parseStylesheet.bind(parser));
-		assertNode('@-moz-document url(http://test), url-prefix(http://www.w3.org/Style/) { body { color: purple; background: yellow; } }', parser, parser._parseStylesheet.bind(parser));
 		assertNode('E E[foo] E[foo="bar"] E[foo~="bar"] E[foo^="bar"] E[foo$="bar"] E[foo*="bar"] E[foo|="en"] {}', parser, parser._parseStylesheet.bind(parser));
 		assertNode('input[type=\"submit\"] {}', parser, parser._parseStylesheet.bind(parser));
 		assertNode('E:root E:nth-child(n) E:nth-last-child(n) E:nth-of-type(n) E:nth-last-of-type(n) E:first-child E:last-child {}', parser, parser._parseStylesheet.bind(parser));
@@ -134,9 +130,6 @@ suite('CSS - Parser', () => {
 	test('@keyframe', function () {
 		let parser = new Parser();
 		assertNode('@keyframes name {}', parser, parser._parseKeyframe.bind(parser));
-		assertNode('@-webkit-keyframes name {}', parser, parser._parseKeyframe.bind(parser));
-		assertNode('@-o-keyframes name {}', parser, parser._parseKeyframe.bind(parser));
-		assertNode('@-moz-keyframes name {}', parser, parser._parseKeyframe.bind(parser));
 		assertNode('@keyframes name { from {} to {}}', parser, parser._parseKeyframe.bind(parser));
 		assertNode('@keyframes name { from {} 80% {} 100% {}}', parser, parser._parseKeyframe.bind(parser));
 		assertNode('@keyframes name { from { top: 0px; } 80% { top: 100px; } 100% { top: 50px; }}', parser, parser._parseKeyframe.bind(parser));
@@ -166,12 +159,12 @@ suite('CSS - Parser', () => {
 		let parser = new Parser();
 		assertNode('@supports ( display: flexbox ) { body { display: flexbox } }', parser, parser._parseSupports.bind(parser));
 		assertNode('@supports not (display: flexbox) { .outline { box-shadow: 2px 2px 2px black; /* unprefixed last */ } }', parser, parser._parseSupports.bind(parser));
-		assertNode('@supports ( box-shadow: 2px 2px 2px black ) or ( -moz-box-shadow: 2px 2px 2px black ) or ( -webkit-box-shadow: 2px 2px 2px black ) { }', parser, parser._parseSupports.bind(parser));
+		assertNode('@supports ( box-shadow: 2px 2px 2px black ) { }', parser, parser._parseSupports.bind(parser));
 		assertNode('@supports ((transition-property: color) or (animation-name: foo)) and (transform: rotate(10deg)) { }', parser, parser._parseSupports.bind(parser));
 		assertNode('@supports ((display: flexbox)) { }', parser, parser._parseSupports.bind(parser));
 		assertNode('@supports (display: flexbox !important) { }', parser, parser._parseSupports.bind(parser));
 		assertNode('@supports (grid-area: auto) { @media screen and (min-width: 768px) { .me { } } }', parser, parser._parseSupports.bind(parser));
-		assertNode('@supports (column-width: 1rem) OR (-moz-column-width: 1rem) OR (-webkit-column-width: 1rem) oR (-x-column-width: 1rem) { }', parser, parser._parseSupports.bind(parser)); // #49288
+		assertNode('@supports (column-width: 1rem) oR (-x-column-width: 1rem) { }', parser, parser._parseSupports.bind(parser)); // #49288
 		assertNode('@supports not (--validValue: , 0 ) {}', parser, parser._parseSupports.bind(parser)); // #82178
 		assertError('@supports (transition-property: color) or (animation-name: foo) and (transform: rotate(10deg)) { }', parser, parser._parseSupports.bind(parser), ParseError.LeftCurlyExpected);
 		assertError('@supports display: flexbox { }', parser, parser._parseSupports.bind(parser), ParseError.LeftParenthesisExpected);
@@ -191,8 +184,6 @@ suite('CSS - Parser', () => {
 		assertNode('@media print and (min-resolution: 118dpcm) { }', parser, parser._parseMedia.bind(parser));
 		assertNode('@media print { @page { margin: 10% } blockquote, pre { page-break-inside: avoid } }', parser, parser._parseMedia.bind(parser));
 		assertNode('@media print { body:before { } }', parser, parser._parseMedia.bind(parser));
-		assertNode('@media not (-moz-os-version: windows-win7) { }', parser, parser._parseMedia.bind(parser));
-		assertNode('@media not (not (-moz-os-version: windows-win7)) { }', parser, parser._parseMedia.bind(parser));
 		assertNode('@media (height > 600px) { }', parser, parser._parseMedia.bind(parser));
 		assertNode('@media (height < 600px) { }', parser, parser._parseMedia.bind(parser));
 		assertNode('@media (height <= 600px) { }', parser, parser._parseMedia.bind(parser));
@@ -501,7 +492,6 @@ suite('CSS - Parser', () => {
 		assertNode('45,5px', parser, parser._parseExpr.bind(parser));
 		assertNode(' 45 , 5px ', parser, parser._parseExpr.bind(parser));
 		assertNode('5/6', parser, parser._parseExpr.bind(parser));
-		assertNode('36mm, -webkit-calc(100%-10px)', parser, parser._parseExpr.bind(parser));
 	});
 
 	test('url', function () {

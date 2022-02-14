@@ -111,12 +111,9 @@ suite('CSS - Lint', () => {
 
 	test('duplicate declarations', function () {
 		assertRuleSet('selector { color: perty; color: perty }', Rules.DuplicateDeclarations, Rules.DuplicateDeclarations);
-		assertRuleSet('selector { color: -o-perty; color: perty }');
 	});
 
 	test('unknown properties', function () {
-		assertRuleSet('selector { -ms-property: "rest is missing" }', Rules.UnknownVendorSpecificProperty);
-		assertRuleSet('selector { -moz-box-shadow: "rest is missing" }', Rules.UnknownVendorSpecificProperty, Rules.IncludeStandardPropertyWhenUsingVendorPrefix);
 		assertRuleSet('selector { box-shadow: none }'); // no error
 		assertRuleSet('selector { box-property: "rest is missing" }', Rules.UnknownProperty);
 		assertRuleSet(':export { prop: "some" }'); // no error for properties inside :export
@@ -235,12 +232,8 @@ suite('CSS - Lint', () => {
 	});
 
 	test('vendor specific prefixes', function () {
-		assertRuleSet('selector { -moz-animation: none }', Rules.AllVendorPrefixes, Rules.IncludeStandardPropertyWhenUsingVendorPrefix);
-		assertRuleSet('selector { -moz-transform: none; transform: none }', Rules.AllVendorPrefixes);
 		assertRuleSet('selector { transform: none; }');
-		assertRuleSet('selector { -moz-transform: none; transform: none; -o-transform: none; -webkit-transform: none; -ms-transform: none; }');
 		assertRuleSet('selector { --transform: none; }');
-		assertRuleSet('selector { -webkit-appearance: none }');
 	});
 
 	test('font-face required properties', function () {
@@ -252,7 +245,5 @@ suite('CSS - Lint', () => {
 
 	test('keyframes', function () {
 		assertStyleSheet('@keyframes foo { }');
-		assertStyleSheet('@keyframes foo { } @-moz-keyframes foo { }', Rules.AllVendorPrefixes);
-		assertStyleSheet('@-moz-keyframes foo { }', Rules.AllVendorPrefixes, Rules.IncludeStandardPropertyWhenUsingVendorPrefix);
 	});
 });

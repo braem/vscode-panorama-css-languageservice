@@ -719,19 +719,16 @@ export class Parser {
 	}
 
 	public _parseViewPort(): nodes.Node | null {
-		if (!this.peekKeyword('@-ms-viewport') &&
-			!this.peekKeyword('@-o-viewport') &&
-			!this.peekKeyword('@viewport')
-		) {
+		if (!this.peekKeyword('@viewport')) {
 			return null;
 		}
 		const node = this.create(nodes.ViewPort);
-		this.consumeToken(); // @-ms-viewport
+		this.consumeToken();
 
 		return this._parseBody(node, this._parseRuleSetDeclaration.bind(this));
 	}
 
-	private keyframeRegex = /^@(\-(webkit|ms|moz|o)\-)?keyframes$/i;
+	private keyframeRegex = /^@keyframes$/i;
 
 	public _parseKeyframe(): nodes.Node | null {
 		if (!this.peekRegExp(TokenType.AtKeyword, this.keyframeRegex)) {
@@ -742,9 +739,6 @@ export class Parser {
 		const atNode = this.create(nodes.Node);
 		this.consumeToken(); // atkeyword
 		node.setKeyword(this.finish(atNode));
-		if (atNode.matches('@-ms-keyframes')) { // -ms-keyframes never existed
-			this.markError(atNode, ParseError.UnknownKeyword);
-		}
 
 		if (!node.setIdentifier(this._parseKeyframeIdent())) {
 			return this.finish(node, ParseError.IdentifierExpected, [TokenType.CurlyR]);

@@ -42,7 +42,7 @@ export class LintVisitor implements nodes.IVisitor {
 	}
 
 	static prefixes = [
-		'-ms-', '-moz-', '-o-', '-webkit-', // Quite common
+		'-s2-', // Quite common
 		//		'-xv-', '-atsc-', '-wap-', '-khtml-', 'mso-', 'prince-', '-ah-', '-hp-', '-ro-', '-rim-', '-tc-' // Quite un-common
 	];
 
@@ -207,29 +207,12 @@ export class LintVisitor implements nodes.IVisitor {
 	}
 
 	private validateKeyframes(): boolean {
-		// @keyframe and it's vendor specific alternatives
-		// @keyframe should be included
-		const expected = ['@-webkit-keyframes', '@-moz-keyframes', '@-o-keyframes'];
-
+		// @keyframes
 		for (const name in this.keyframes.data) {
 			const actual = this.keyframes.data[name].names;
 			const needsStandard = (actual.indexOf('@keyframes') === -1);
 			if (!needsStandard && actual.length === 1) {
-				continue; // only the non-vendor specific keyword is used, that's fine, no warning
-			}
-
-			const missingVendorSpecific = this.getMissingNames(expected, actual);
-			if (missingVendorSpecific || needsStandard) {
-				for (const node of this.keyframes.data[name].nodes) {
-					if (needsStandard) {
-						const message = localize('keyframes.standardrule.missing', "Always define standard rule '@keyframes' when defining keyframes.");
-						this.addEntry(node, Rules.IncludeStandardPropertyWhenUsingVendorPrefix, message);
-					}
-					if (missingVendorSpecific) {
-						const message = localize('keyframes.vendorspecific.missing', "Always include all vendor specific rules: Missing: {0}", missingVendorSpecific);
-						this.addEntry(node, Rules.AllVendorPrefixes, message);
-					}
-				}
+				continue;
 			}
 		}
 

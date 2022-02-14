@@ -462,7 +462,6 @@ suite('SCSS - Parser', () => {
 		let parser = new SCSSParser();
 		assertNode('@mixin large-text { font: { family: Arial; size: 20px; } color: #ff0000; }', parser, parser._parseStylesheet.bind(parser));
 		assertNode('@mixin sexy-border($color, $width: 1in) { color: black; }', parser, parser._parseStylesheet.bind(parser));
-		assertNode('@mixin box-shadow($shadows...) { -moz-box-shadow: $shadows; }', parser, parser._parseStylesheet.bind(parser));
 		assertNode('@mixin apply-to-ie6-only {  * html { @content; } }', parser, parser._parseStylesheet.bind(parser));
 		assertNode('@mixin #{foo}($color){}', parser, parser._parseStylesheet.bind(parser));
 		assertNode('@mixin foo ($i:4) { size: $i; @include wee ($i - 1); }', parser, parser._parseStylesheet.bind(parser));
@@ -555,7 +554,6 @@ suite('SCSS - Parser', () => {
 		assertNode('selector { nested {}}', parser, parser._parseRuleset.bind(parser));
 		assertNode('selector { nested, a, b {}}', parser, parser._parseRuleset.bind(parser));
 		assertNode('selector { property: value; property: $value; }', parser, parser._parseRuleset.bind(parser));
-		assertNode('selector { property: value; @keyframes foo {} @-moz-keyframes foo {}}', parser, parser._parseRuleset.bind(parser));
 		assertNode('foo|bar { }', parser, parser._parseRuleset.bind(parser));
 	});
 

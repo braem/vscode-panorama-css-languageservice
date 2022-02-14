@@ -52,17 +52,11 @@ suite('SCSS - Lint', () => {
 	});
 
 	test('unknown properties', function () {
-		assertRuleSet('selector { -ms-property: "rest is missing" }', Rules.UnknownVendorSpecificProperty);
-		assertRuleSet('selector { -moz-box-shadow: "rest is missing" }', Rules.UnknownVendorSpecificProperty, Rules.IncludeStandardPropertyWhenUsingVendorPrefix);
 		assertRuleSet('selector { box-shadow: none }'); // no error
-		assertRuleSet('selector { -moz-#{box}-shadow: none }'); // no error if theres an interpolation
 		assertRuleSet('selector { outer: { nested : blue }'); // no error for nested
 		assertRuleSet(':export { prop: "some" }'); // no error for properties inside :export
 	});
 
 	test('vendor specific prefixes', function () {
-		assertRuleSet('selector { -moz-animation: none }', Rules.AllVendorPrefixes, Rules.IncludeStandardPropertyWhenUsingVendorPrefix);
-		assertRuleSet('selector { -moz-transform: none; transform: none }', Rules.AllVendorPrefixes);
-		assertRuleSet('selector { -moz-transform: none; transform: none; -o-transform: none; -webkit-transform: none; -ms-transform: none; }');
 	});
 });

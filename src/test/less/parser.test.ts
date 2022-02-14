@@ -109,7 +109,6 @@ suite('LESS - Parser', () => {
 		assertNode('.foo {  @greeting(); }', parser, parser._parseStylesheet.bind(parser));
 		assertNode('.media-switch(@styles) { @media(orientation:landscape){ @styles(); @foo: 9; } }', parser, parser._parseStylesheet.bind(parser));
 		assertNode('.media-switch({ flex-direction: row; });', parser, parser._parseStylesheet.bind(parser));
-		assertNode('.keyframes(@name; @arguments) { @-moz-keyframes @name { @arguments(); } }', parser, parser._parseStylesheet.bind(parser));
 		assertNode('.keyframes(fade-in;{ 0%, 100% { opacity: 1; }});', parser, parser._parseStylesheet.bind(parser));
 		assertNode('.foo({ .bar { color: red; }})', parser, parser._parseStylesheet.bind(parser));
 		assertNode('.foo({ .bar { .baz { color: red; }}})', parser, parser._parseStylesheet.bind(parser));
@@ -259,7 +258,6 @@ suite('LESS - Parser', () => {
 		assertNode('selector { nested {}}', parser, parser._parseRuleset.bind(parser));
 		assertNode('selector { nested, a, b {}}', parser, parser._parseRuleset.bind(parser));
 		assertNode('selector { property: value; property: value; }', parser, parser._parseRuleset.bind(parser));
-		assertNode('selector { property: value; @keyframes foo {} @-moz-keyframes foo {}}', parser, parser._parseRuleset.bind(parser));
 		assertNode('selector {  @import "bar"; }', parser, parser._parseRuleset.bind(parser));
 	});
 

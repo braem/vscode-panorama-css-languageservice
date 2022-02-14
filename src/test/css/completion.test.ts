@@ -299,8 +299,7 @@ suite('CSS - Completion', () => {
 		await testCompletionFor('body { m|', {
 			items: [
 				{ label: 'mask', resultText: 'body { mask: ' },
-				{ label: 'mask-border', resultText: 'body { mask-border: ' },
-				{ label: '-webkit-mask', resultText: 'body { -webkit-mask: ' }
+				{ label: 'mask-border', resultText: 'body { mask-border: ' }
 			]
 		});
 	});
@@ -766,9 +765,6 @@ suite('CSS - Completion', () => {
 			items: [
 				// Enum with no prefix come before everything
 				{ label: 'grid', sortText: ' ' },
-				// Enum with prefix come next
-				{ label: '-moz-grid', sortText: ' x' },
-				{ label: '-ms-grid', sortText: ' x' },
 				// Others come last
 				{ label: 'inherit', sortText: undefined }
 			]
@@ -781,7 +777,6 @@ suite('CSS - Completion', () => {
 			properties: [
 				{ name: 'foo', relevance: 93 },
 				{ name: 'bar', relevance: 1 },
-				{ name: '-webkit-bar', relevance: 12 },
 				{ name: 'xoo' },
 				{ name: 'bar2', relevance: 0 },
 			]
@@ -790,7 +785,6 @@ suite('CSS - Completion', () => {
 			items: [
 				{ label: 'foo', sortText: 'd_a2' },
 				{ label: 'bar', sortText: 'd_fe' },
-				{ label: '-webkit-bar', sortText: 'x_f3' },
 				{ label: 'xoo', sortText: 'd_cd' },
 				{ label: 'bar2', sortText: 'd_ff' }
 			]

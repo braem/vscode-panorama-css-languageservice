@@ -222,8 +222,6 @@ p { @include sexy-border(blue); }
 
 /* mixin with varargs */
 @mixin box-shadow($shadows...) {
-	-moz-box-shadow: $shadows;
-	-webkit-box-shadow: $shadows;
 	box-shadow: $shadows;
 }
 .shadows {
@@ -308,18 +306,6 @@ foo {
 }
 
 /* keyframes */
-@-webkit-keyframes NAME-YOUR-ANIMATION {
-	0%   { opacity: 0; }
-	100% { opacity: 1; }
-}
-@-moz-keyframes NAME-YOUR-ANIMATION {
-	0%   { opacity: 0; }
-	100% { opacity: 1; }
-}
-@-o-keyframes NAME-YOUR-ANIMATION {
-	0%   { opacity: 0; }
-	100% { opacity: 1; }
-}
 @keyframes NAME-YOUR-ANIMATION {
 	0%   { opacity: 0; }
 	100% { opacity: 1; }

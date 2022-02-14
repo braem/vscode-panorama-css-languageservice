@@ -176,14 +176,12 @@ suite('CSS - Completion', () => {
 	test('stylesheet', async function () {
 		await testCompletionFor('| ', {
 			items: [
-				{ label: '@import', resultText: '@import ' },
 				{ label: '@keyframes', resultText: '@keyframes ' },
 				{ label: 'div', resultText: 'div ' }
 			]
 		});
 		await testCompletionFor('| body {', {
 			items: [
-				{ label: '@import', resultText: '@import body {' },
 				{ label: '@keyframes', resultText: '@keyframes body {' },
 				{ label: 'html', resultText: 'html body {' }
 			]

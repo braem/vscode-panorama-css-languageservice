@@ -13125,66 +13125,6 @@ export const cssData : CSSDataV1 = {
 	],
 	"atDirectives": [
 		{
-			"name": "@charset",
-			"references": [
-				{
-					"name": "MDN Reference",
-					"url": "https://developer.mozilla.org/docs/Web/CSS/@charset"
-				}
-			],
-			"description": "Defines character set of the document."
-		},
-		{
-			"name": "@counter-style",
-			"browsers": [
-				"E91",
-				"FF33",
-				"C91",
-				"O77"
-			],
-			"references": [
-				{
-					"name": "MDN Reference",
-					"url": "https://developer.mozilla.org/docs/Web/CSS/@counter-style"
-				}
-			],
-			"description": "Defines a custom counter style."
-		},
-		{
-			"name": "@font-face",
-			"references": [
-				{
-					"name": "MDN Reference",
-					"url": "https://developer.mozilla.org/docs/Web/CSS/@font-face"
-				}
-			],
-			"description": "Allows for linking to fonts that are automatically activated when needed. This permits authors to work around the limitation of 'web-safe' fonts, allowing for consistent rendering independent of the fonts available in a given user's environment."
-		},
-		{
-			"name": "@font-feature-values",
-			"browsers": [
-				"FF34",
-				"S9.1"
-			],
-			"references": [
-				{
-					"name": "MDN Reference",
-					"url": "https://developer.mozilla.org/docs/Web/CSS/@font-feature-values"
-				}
-			],
-			"description": "Defines named values for the indices used to select alternate glyphs for a given font family."
-		},
-		{
-			"name": "@import",
-			"references": [
-				{
-					"name": "MDN Reference",
-					"url": "https://developer.mozilla.org/docs/Web/CSS/@import"
-				}
-			],
-			"description": "Includes content of another file."
-		},
-		{
 			"name": "@keyframes",
 			"references": [
 				{
@@ -13193,60 +13133,6 @@ export const cssData : CSSDataV1 = {
 				}
 			],
 			"description": "Defines set of animation key frames."
-		},
-		{
-			"name": "@media",
-			"references": [
-				{
-					"name": "MDN Reference",
-					"url": "https://developer.mozilla.org/docs/Web/CSS/@media"
-				}
-			],
-			"description": "Defines a stylesheet for a particular media type."
-		},
-		{
-			"name": "@namespace",
-			"references": [
-				{
-					"name": "MDN Reference",
-					"url": "https://developer.mozilla.org/docs/Web/CSS/@namespace"
-				}
-			],
-			"description": "Declares a prefix and associates it with a namespace name."
-		},
-		{
-			"name": "@page",
-			"browsers": [
-				"E12",
-				"FF19",
-				"C2",
-				"IE8",
-				"O6"
-			],
-			"references": [
-				{
-					"name": "MDN Reference",
-					"url": "https://developer.mozilla.org/docs/Web/CSS/@page"
-				}
-			],
-			"description": "Directive defines various page parameters."
-		},
-		{
-			"name": "@supports",
-			"browsers": [
-				"E12",
-				"FF22",
-				"S9",
-				"C28",
-				"O12.1"
-			],
-			"references": [
-				{
-					"name": "MDN Reference",
-					"url": "https://developer.mozilla.org/docs/Web/CSS/@supports"
-				}
-			],
-			"description": "A conditional group rule whose condition tests whether the user agent supports CSS property:value pairs."
 		}
 	],
 	"pseudoClasses": [

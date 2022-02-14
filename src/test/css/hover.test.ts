@@ -30,14 +30,14 @@ suite('CSS Hover', () => {
 			contents: {
 				kind: 'markdown',
 				value:
-					"Sets the color of an element's text\n\nSyntax: &lt;color&gt;\n\n[MDN Reference](https://developer.mozilla.org/docs/Web/CSS/color)"
+					"Sets the color of an element's text\n\nSyntax: &lt;color&gt;\n\n[VDC Reference](https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#color) | [MDN Reference](https://developer.mozilla.org/docs/Web/CSS/color)"
 			}
 		});
 		assertHover('.test { |color: blue; }', {
 			contents: {
 				kind: 'markdown',
 				value:
-					"[MDN Reference](https://developer.mozilla.org/docs/Web/CSS/color)"
+					"[VDC Reference](https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#color) | [MDN Reference](https://developer.mozilla.org/docs/Web/CSS/color)"
 			}
 		}, undefined, { documentation: false });
 		assertHover('.test { |color: blue; }', {

@@ -53,6 +53,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 82,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#animation"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/animation"
 				}
@@ -71,6 +75,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "<time>#",
 			"relevance": 63,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#animation-delay"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/animation-delay"
@@ -105,6 +113,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 56,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#animation-direction"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/animation-direction"
 				}
@@ -119,6 +131,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "<time>#",
 			"relevance": 70,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#animation-duration"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/animation-duration"
@@ -153,6 +169,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 63,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#animation-fill-mode"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/animation-fill-mode"
 				}
@@ -173,6 +193,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "<single-animation-iteration-count>#",
 			"relevance": 60,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#animation-iteration-count"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/animation-iteration-count"
@@ -196,6 +220,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 70,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#animation-name"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/animation-name"
 				}
@@ -212,6 +240,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 70,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#animation-timing-function"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/animation-timing-function"
 				}
@@ -226,6 +258,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "<color>",
 			"relevance": 94,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#background-color"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/background-color"
@@ -248,6 +284,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 89,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#background-image"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/background-image"
 				}
@@ -263,6 +303,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "<bg-position>#",
 			"relevance": 88,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#background-position"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/background-position"
@@ -307,6 +351,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 86,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#background-repeat"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/background-repeat"
 				}
@@ -328,6 +376,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 86,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#background-size"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/background-size"
 				}
@@ -343,6 +395,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "<line-width> || <line-style> || <color>",
 			"relevance": 96,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#border"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/border"
@@ -362,6 +418,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 89,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#border-bottom"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/border-bottom"
 				}
@@ -380,6 +440,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 71,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#border-bottom-color"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/border-bottom-color"
 				}
@@ -394,6 +458,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "<length-percentage>{1,2}",
 			"relevance": 75,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#border-bottom-left-radius"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/border-bottom-left-radius"
@@ -411,6 +479,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 74,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#border-bottom-right-radius"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/border-bottom-right-radius"
 				}
@@ -427,6 +499,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 58,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#border-bottom-style"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/border-bottom-style"
 				}
@@ -441,6 +517,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "<line-width>",
 			"relevance": 62,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#border-bottom-width"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/border-bottom-width"
@@ -459,6 +539,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 87,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#border-color"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/border-color"
 				}
@@ -473,6 +557,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "<line-width> || <line-style> || <color>",
 			"relevance": 83,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#border-left"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/border-left"
@@ -492,6 +580,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 65,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#border-left-color"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/border-left-color"
 				}
@@ -507,6 +599,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 53,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#border-left-style"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/border-left-style"
 				}
@@ -521,6 +617,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "<line-width>",
 			"relevance": 58,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#border-left-width"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/border-left-width"
@@ -538,6 +638,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 92,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#border-radius"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/border-radius"
 				}
@@ -553,6 +657,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "<line-width> || <line-style> || <color>",
 			"relevance": 81,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#border-right"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/border-right"
@@ -572,6 +680,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 64,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#border-right-color"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/border-right-color"
 				}
@@ -587,6 +699,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 53,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#border-right-style"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/border-right-style"
 				}
@@ -601,6 +717,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "<line-width>",
 			"relevance": 59,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#border-right-width"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/border-right-width"
@@ -619,6 +739,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 81,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#border-style"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/border-style"
 				}
@@ -633,6 +757,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "<line-width> || <line-style> || <color>",
 			"relevance": 88,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#border-top"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/border-top"
@@ -652,6 +780,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 72,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#border-top-color"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/border-top-color"
 				}
@@ -666,6 +798,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "<length-percentage>{1,2}",
 			"relevance": 75,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#border-top-left-radius"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/border-top-left-radius"
@@ -683,6 +819,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 75,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#border-top-right-radius"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/border-top-right-radius"
 				}
@@ -699,6 +839,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 58,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#border-top-style"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/border-top-style"
 				}
@@ -713,6 +857,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "<line-width>",
 			"relevance": 61,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#border-top-width"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/border-top-width"
@@ -730,6 +878,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "<line-width>{1,4}",
 			"relevance": 82,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#border-width"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/border-width"
@@ -756,6 +908,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "none | <shadow>#",
 			"relevance": 90,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#box-shadow"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/box-shadow"
@@ -788,6 +944,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 74,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#clip"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/clip"
 				}
@@ -802,6 +962,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "<color>",
 			"relevance": 95,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#color"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/color"
@@ -874,6 +1038,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 94,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#font-family"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/font-family"
 				}
@@ -918,6 +1086,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 95,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#font-size"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/font-size"
 				}
@@ -943,6 +1115,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "normal | italic <angle>{0,2}",
 			"relevance": 90,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#font-style"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/font-style"
@@ -1021,6 +1197,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 94,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#font-weight"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/font-weight"
 				}
@@ -1050,6 +1230,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 96,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#height"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/height"
 				}
@@ -1072,6 +1256,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 82,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#letter-spacing"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/letter-spacing"
 				}
@@ -1087,6 +1275,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "<length>",
 			"relevance": 93,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#line-height"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/line-height"
@@ -1105,6 +1297,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 96,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#margin"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/margin"
 				}
@@ -1121,6 +1317,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "<length> | <percentage>",
 			"relevance": 92,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#margin-bottom"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/margin-bottom"
@@ -1139,6 +1339,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 92,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#margin-left"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/margin-left"
 				}
@@ -1156,6 +1360,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 91,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#margin-right"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/margin-right"
 				}
@@ -1172,6 +1380,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "<length> | <percentage>",
 			"relevance": 95,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#margin-top"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/margin-top"
@@ -1203,6 +1415,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 86,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#max-height"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/max-height"
 				}
@@ -1232,6 +1448,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "<viewport-length>",
 			"relevance": 91,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#max-width"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/max-width"
@@ -1263,6 +1483,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 90,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#min-height"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/min-height"
 				}
@@ -1292,6 +1516,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "<viewport-length>",
 			"relevance": 89,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#min-width"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/min-width"
@@ -1327,6 +1555,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 93,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#overflow"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/overflow"
 				}
@@ -1342,6 +1574,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "[ <length> | <percentage> ]{1,4}",
 			"relevance": 96,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#padding"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/padding"
@@ -1359,6 +1595,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 90,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#padding-bottom"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/padding-bottom"
 				}
@@ -1374,6 +1614,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "<length> | <percentage>",
 			"relevance": 91,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#padding-left"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/padding-left"
@@ -1391,6 +1635,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 90,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#padding-right"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/padding-right"
 				}
@@ -1406,6 +1654,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "<length> | <percentage>",
 			"relevance": 91,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#padding-top"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/padding-top"
@@ -1424,6 +1676,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 55,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#perspective"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/perspective"
 				}
@@ -1439,6 +1695,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "<position>",
 			"relevance": 51,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#perspective-origin"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/perspective-origin"
@@ -1457,6 +1717,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "<length> | <percentage>{3}",
 			"relevance": 96,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#position"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/position"
@@ -1489,6 +1753,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 94,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#text-align"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/text-align"
 				}
@@ -1517,6 +1785,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "none | underline | line-through",
 			"relevance": 92,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#text-decoration"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/text-decoration"
@@ -1551,6 +1823,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 82,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#text-overflow"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/text-overflow"
 				}
@@ -1571,6 +1847,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "none | <shadow-t>#",
 			"relevance": 75,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#text-shadow"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/text-shadow"
@@ -1601,6 +1881,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "none | uppercase | lowercase",
 			"relevance": 86,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#text-transform"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/text-transform"
@@ -1670,6 +1954,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 91,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#transform"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/transform"
 				}
@@ -1684,6 +1972,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "<length-percentage> <length-percentage>",
 			"relevance": 77,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#transform-origin"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/transform-origin"
@@ -1707,6 +1999,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 89,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#transition"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/transition"
 				}
@@ -1725,6 +2021,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 63,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#transition-delay"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/transition-delay"
 				}
@@ -1739,6 +2039,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "<time>#",
 			"relevance": 63,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#transition-duration"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/transition-duration"
@@ -1775,6 +2079,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "<easing-function>#",
 			"relevance": 64,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#transition-property"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/transition-timing-function"
@@ -1813,6 +2121,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 92,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#vertical-align"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/vertical-align"
 				}
@@ -1839,6 +2151,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 88,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#visibility"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/visibility"
 				}
@@ -1863,6 +2179,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "normal | nowrap",
 			"relevance": 90,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#white-space"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/white-space"
@@ -1893,6 +2213,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 96,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#width"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/width"
 				}
@@ -1909,6 +2233,10 @@ export const cssData : CSSDataV1 = {
 			"syntax": "<integer>",
 			"relevance": 92,
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#z-index"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/z-index"
@@ -1937,6 +2265,10 @@ export const cssData : CSSDataV1 = {
 			"name": ":active",
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#Supported_pseudo-selectors"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/:active"
 				}
@@ -1946,6 +2278,10 @@ export const cssData : CSSDataV1 = {
 		{
 			"name": ":disabled",
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#Supported_pseudo-selectors"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/:disabled"
@@ -1957,6 +2293,10 @@ export const cssData : CSSDataV1 = {
 			"name": ":enabled",
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#Supported_pseudo-selectors"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/:enabled"
 				}
@@ -1967,6 +2307,10 @@ export const cssData : CSSDataV1 = {
 			"name": ":focus",
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#Supported_pseudo-selectors"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/:focus"
 				}
@@ -1976,6 +2320,10 @@ export const cssData : CSSDataV1 = {
 		{
 			"name": ":hover",
 			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#Supported_pseudo-selectors"
+				},
 				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/:hover"

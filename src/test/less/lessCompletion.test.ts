@@ -69,14 +69,9 @@ suite('LESS - Completions', () => {
 				//{ label: '::after', resultText: '.btn-group { .btn::after }' }
 			]
 		});
-		await testCompletionFor('.foo { &:|', {
+		await testCompletionFor('.foo { &:d|', {
 			items: [
-				{ label: ':last-of-type', resultText: '.foo { &:last-of-type' }
-			]
-		});
-		await testCompletionFor('.foo { &:l|', {
-			items: [
-				{ label: ':last-of-type', resultText: '.foo { &:last-of-type' }
+				{ label: ':disabled', resultText: '.foo { &:disabled' }
 			]
 		});
 		await testCompletionFor('.foo { appearance:| }', {

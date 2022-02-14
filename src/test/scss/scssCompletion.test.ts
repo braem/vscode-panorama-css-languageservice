@@ -81,15 +81,9 @@ suite('SCSS - Completions', () => {
 		await testCompletionFor('.foo { display: block;|', {
 			count: 0
 		});
-		// issue microsoft/vscode#17726
-		await testCompletionFor('.foo { &:|', {
+		await testCompletionFor('.foo { &:d|', {
 			items: [
-				{ label: ':last-of-type', resultText: '.foo { &:last-of-type' }
-			]
-		});
-		await testCompletionFor('.foo { &:l|', {
-			items: [
-				{ label: ':last-of-type', resultText: '.foo { &:last-of-type' }
+				{ label: ':disabled', resultText: '.foo { &:disabled' }
 			]
 		});
 		// issue microsoft/vscode#109185

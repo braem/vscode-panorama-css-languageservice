@@ -2280,21 +2280,10 @@ export const cssData : CSSDataV1 = {
 		},
 		{
 			"name": ":matches()",
-			"browsers": [
-				"S9"
-			],
 			"description": "Takes a selector list as its argument. It represents an element that is represented by its argument."
 		},
 		{
 			"name": ":not()",
-			"browsers": [
-				"E",
-				"C",
-				"FF1",
-				"IE9",
-				"O9.5",
-				"S2"
-			],
 			"description": "The negation pseudo-class, :not(X), is a functional notation taking a simple selector (excluding the negation pseudo-class itself) as an argument. It represents an element that is not represented by its argument."
 		}
 	],

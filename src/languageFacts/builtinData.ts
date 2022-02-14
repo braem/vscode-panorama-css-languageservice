@@ -68,10 +68,7 @@ export const imageFunctions: { [name: string]: string } = {
 	'image-set()': 'Provide multiple resolutions of an image and const the UA decide which is most appropriate in a given situation.',
 	'element()': 'Use an element in the document as an image.',
 	'cross-fade()': 'Indicates the two images to be combined and how far along in the transition the combination is.',
-	'linear-gradient()': 'A linear gradient is created by specifying a straight gradient line, and then several colors placed along that line.',
-	'repeating-linear-gradient()': 'Same as linear-gradient, except the color-stops are repeated infinitely in both directions, with their positions shifted by multiples of the difference between the last specified color-stop’s position and the first specified color-stop’s position.',
-	'radial-gradient()': 'Colors emerge from a single point and smoothly spread outward in a circular or elliptical shape.',
-	'repeating-radial-gradient()': 'Same as radial-gradient, except the color-stops are repeated infinitely in both directions, with their positions shifted by multiples of the difference between the last specified color-stop’s position and the first specified color-stop’s position.'
+	'gradient()': 'A gradient is created by specifying type, horizontal percentages, vertical percentages, and then several colors placed along that line.'
 };
 
 export const transitionTimingFunctions: { [name: string]: string } = {
@@ -140,7 +137,4 @@ export const svgElements = ['circle', 'clipPath', 'cursor', 'defs', 'desc', 'ell
 	'symbol', 'text', 'textPath', 'tspan', 'use', 'view'];
 
 export const pageBoxDirectives = [
-	'@bottom-center', '@bottom-left', '@bottom-left-corner', '@bottom-right', '@bottom-right-corner',
-	'@left-bottom', '@left-middle', '@left-top', '@right-bottom', '@right-middle', '@right-top',
-	'@top-center', '@top-left', '@top-left-corner', '@top-right', '@top-right-corner'
 ];

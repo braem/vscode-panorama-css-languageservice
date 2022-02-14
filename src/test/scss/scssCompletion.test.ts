@@ -221,18 +221,6 @@ suite('SCSS - Completions', () => {
 		});
 	});
 
-	test('Enum + color restrictions are sorted properly', async () => {
-		await testCompletionFor('.foo { text-decoration: | }', {
-			items: [
-				// Enum come before everything
-				{ label: 'dashed', sortText: ' ' },
-				// Others come later
-				{ label: 'aqua', sortText: undefined },
-				{ label: 'inherit', sortText: undefined }
-			]
-		});
-	});
-
 	const testFixturesPath = path.join(__dirname, '../../../../test');
 
 	/**

@@ -49,7 +49,7 @@ export const cssData : CSSDataV1 = {
 					"description": "All iterations of the animation are played in the reverse direction from the way they were specified."
 				}
 			],
-			"syntax": "<single-animation>#",
+			"syntax": "none | <single-animation>#",
 			"relevance": 82,
 			"references": [
 				{
@@ -277,7 +277,32 @@ export const cssData : CSSDataV1 = {
 		},
 		{
 			"name": "background-repeat",
-			"values": [],
+			"values": [
+				{
+					"name": "repeat",
+					"description": "(default) Repeats in the specified direction until it fills the panel."
+				},
+				{
+					"name": "space",
+					"description": "Repeats as many times as required to fill the panel w/o being clipped. Space is added between images to to align first and last image with panel edges."
+				},
+				{
+					"name": "round",
+					"description": "Repeats as many times as required to fill the panel w/o being clipped. The image is resized to align first and last image with panel edges."
+				},
+				{
+					"name": "no-repeat",
+					"description": "Not repeated."
+				},
+				{
+					"name": "repeat-x",
+					"description": "Single value that is equivalent to 'repeat no-repeat'"
+				},
+				{
+					"name": "repeat-y",
+					"description": "Single value that is equivalent to 'no-repeat repeat'"
+				}
+			],
 			"syntax": "<repeat-style>#",
 			"relevance": 86,
 			"references": [
@@ -297,14 +322,6 @@ export const cssData : CSSDataV1 = {
 				{
 					"name": "auto",
 					"description": "Resolved by using the image’s intrinsic ratio and the size of the other dimension, or failing that, using the image’s intrinsic size, or failing that, treating it as 100%."
-				},
-				{
-					"name": "contain",
-					"description": "Scale the image, while preserving its intrinsic aspect ratio (if any), to the largest size such that both its width and its height can fit inside the background positioning area."
-				},
-				{
-					"name": "cover",
-					"description": "Scale the image, while preserving its intrinsic aspect ratio (if any), to the smallest size such that both its width and its height can completely cover the background positioning area."
 				}
 			],
 			"syntax": "<bg-size>#",
@@ -761,6 +778,10 @@ export const cssData : CSSDataV1 = {
 				{
 					"name": "rect()",
 					"description": "Specifies offsets from the edges of the border box."
+				},
+				{
+					"name": "radial()",
+					"description": "Specifies offsets from the edges of the border box in a radius, which takes a center point, start angle and angular width of the revealed sector."
 				}
 			],
 			"syntax": "<shape> | auto",
@@ -789,138 +810,6 @@ export const cssData : CSSDataV1 = {
 			"description": "Sets the color of an element's text",
 			"restrictions": [
 				"color"
-			]
-		},
-		{
-			"name": "font",
-			"values": [
-				{
-					"name": "100",
-					"description": "Thin"
-				},
-				{
-					"name": "200",
-					"description": "Extra Light (Ultra Light)"
-				},
-				{
-					"name": "300",
-					"description": "Light"
-				},
-				{
-					"name": "400",
-					"description": "Normal"
-				},
-				{
-					"name": "500",
-					"description": "Medium"
-				},
-				{
-					"name": "600",
-					"description": "Semi Bold (Demi Bold)"
-				},
-				{
-					"name": "700",
-					"description": "Bold"
-				},
-				{
-					"name": "800",
-					"description": "Extra Bold (Ultra Bold)"
-				},
-				{
-					"name": "900",
-					"description": "Black (Heavy)"
-				},
-				{
-					"name": "bold",
-					"description": "Same as 700"
-				},
-				{
-					"name": "bolder",
-					"description": "Specifies the weight of the face bolder than the inherited value."
-				},
-				{
-					"name": "caption",
-					"description": "The font used for captioned controls (e.g., buttons, drop-downs, etc.)."
-				},
-				{
-					"name": "icon",
-					"description": "The font used to label icons."
-				},
-				{
-					"name": "italic",
-					"description": "Selects a font that is labeled 'italic', or, if that is not available, one labeled 'oblique'."
-				},
-				{
-					"name": "large"
-				},
-				{
-					"name": "larger"
-				},
-				{
-					"name": "lighter",
-					"description": "Specifies the weight of the face lighter than the inherited value."
-				},
-				{
-					"name": "medium"
-				},
-				{
-					"name": "menu",
-					"description": "The font used in menus (e.g., dropdown menus and menu lists)."
-				},
-				{
-					"name": "message-box",
-					"description": "The font used in dialog boxes."
-				},
-				{
-					"name": "normal",
-					"description": "Specifies a face that is not labeled as a small-caps font."
-				},
-				{
-					"name": "oblique",
-					"description": "Selects a font that is labeled 'oblique'."
-				},
-				{
-					"name": "small"
-				},
-				{
-					"name": "small-caps",
-					"description": "Specifies a font that is labeled as a small-caps font. If a genuine small-caps font is not available, user agents should simulate a small-caps font."
-				},
-				{
-					"name": "small-caption",
-					"description": "The font used for labeling small controls."
-				},
-				{
-					"name": "smaller"
-				},
-				{
-					"name": "status-bar",
-					"description": "The font used in window status bars."
-				},
-				{
-					"name": "x-large"
-				},
-				{
-					"name": "x-small"
-				},
-				{
-					"name": "xx-large"
-				},
-				{
-					"name": "xx-small"
-				}
-			],
-			"syntax": "[ [ <'font-style'> || <font-variant-css21> || <'font-weight'> || <'font-stretch'> ]? <'font-size'> [ / <'line-height'> ]? <'font-family'> ] | caption | icon | menu | message-box | small-caption | status-bar",
-			"relevance": 84,
-			"references": [
-				{
-					"name": "MDN Reference",
-					"url": "https://developer.mozilla.org/docs/Web/CSS/font"
-				}
-			],
-			"description": "Shorthand property for setting 'font-style', 'font-variant', 'font-weight', 'font-size', 'line-height', and 'font-family', at the same place in the style sheet. The syntax of this property is based on a traditional typographical shorthand notation to set multiple properties related to fonts.",
-			"restrictions": [
-				"font"
 			]
 		},
 		{
@@ -1049,13 +938,9 @@ export const cssData : CSSDataV1 = {
 				{
 					"name": "normal",
 					"description": "Selects a face that is classified as 'normal'."
-				},
-				{
-					"name": "oblique",
-					"description": "Selects a font that is labeled as an 'oblique' face, or an 'italic' face if one is not."
 				}
 			],
-			"syntax": "normal | italic | oblique <angle>{0,2}",
+			"syntax": "normal | italic <angle>{0,2}",
 			"relevance": 90,
 			"references": [
 				{
@@ -1108,20 +993,28 @@ export const cssData : CSSDataV1 = {
 					"description": "Black (Heavy)"
 				},
 				{
-					"name": "bold",
-					"description": "Same as 700"
+					"name": "thin",
+					"description": "Same as 100"
 				},
 				{
-					"name": "bolder",
-					"description": "Specifies the weight of the face bolder than the inherited value."
-				},
-				{
-					"name": "lighter",
-					"description": "Specifies the weight of the face lighter than the inherited value."
+					"name": "light",
+					"description": "Same as 300"
 				},
 				{
 					"name": "normal",
 					"description": "Same as 400"
+				},
+				{
+					"name": "medium",
+					"description": "Same as 500"
+				},
+				{
+					"name": "bold",
+					"description": "Same as 700"
+				},
+				{
+					"name": "black",
+					"description": "Same as 900"
 				}
 			],
 			"syntax": "<font-weight-absolute>{1,2}",
@@ -1141,20 +1034,16 @@ export const cssData : CSSDataV1 = {
 			"name": "height",
 			"values": [
 				{
-					"name": "auto",
-					"description": "The height depends on the values of other properties."
+					"name": "fit-children",
+					"description": "(default) Panel size is set to the required size of all children. Can be specified in pixels or percentage."
 				},
 				{
-					"name": "fit-content",
-					"description": "Use the fit-content inline size or fit-content block size, as appropriate to the writing mode."
+					"name": "fill-parent-flow()",
+					"description": "(default) Fills to remaining parent height. If multiple children are set to this value, weight is used to determine final height."
 				},
 				{
-					"name": "max-content",
-					"description": "Use the max-content inline size or max-content block size, as appropriate to the writing mode."
-				},
-				{
-					"name": "min-content",
-					"description": "Use the min-content inline size or min-content block size, as appropriate to the writing mode."
+					"name": "width-percentage()",
+					"description": "(default) Percentage of the panel's width, which allows you to enforce a particular aspect ratio."
 				}
 			],
 			"syntax": "<viewport-length>{1,2}",
@@ -1194,13 +1083,8 @@ export const cssData : CSSDataV1 = {
 		},
 		{
 			"name": "line-height",
-			"values": [
-				{
-					"name": "normal",
-					"description": "Tells user agents to set the computed value to a 'reasonable' value based on the font size of the element."
-				}
-			],
-			"syntax": "normal | <number> | <length> | <percentage>",
+			"values": [],
+			"syntax": "<length>",
 			"relevance": 93,
 			"references": [
 				{
@@ -1211,18 +1095,13 @@ export const cssData : CSSDataV1 = {
 			"description": "Determines the block-progression dimension of the text content area of an inline box.",
 			"restrictions": [
 				"number",
-				"length",
-				"percentage"
+				"length"
 			]
 		},
 		{
 			"name": "margin",
-			"values": [
-				{
-					"name": "auto"
-				}
-			],
-			"syntax": "[ <length> | <percentage> | auto ]{1,4}",
+			"values": [],
+			"syntax": "[ <length> | <percentage> ]{1,4}",
 			"relevance": 96,
 			"references": [
 				{
@@ -1238,12 +1117,8 @@ export const cssData : CSSDataV1 = {
 		},
 		{
 			"name": "margin-bottom",
-			"values": [
-				{
-					"name": "auto"
-				}
-			],
-			"syntax": "<length> | <percentage> | auto",
+			"values": [],
+			"syntax": "<length> | <percentage>",
 			"relevance": 92,
 			"references": [
 				{
@@ -1259,12 +1134,8 @@ export const cssData : CSSDataV1 = {
 		},
 		{
 			"name": "margin-left",
-			"values": [
-				{
-					"name": "auto"
-				}
-			],
-			"syntax": "<length> | <percentage> | auto",
+			"values": [],
+			"syntax": "<length> | <percentage>",
 			"relevance": 92,
 			"references": [
 				{
@@ -1280,12 +1151,8 @@ export const cssData : CSSDataV1 = {
 		},
 		{
 			"name": "margin-right",
-			"values": [
-				{
-					"name": "auto"
-				}
-			],
-			"syntax": "<length> | <percentage> | auto",
+			"values": [],
+			"syntax": "<length> | <percentage>",
 			"relevance": 91,
 			"references": [
 				{
@@ -1301,12 +1168,8 @@ export const cssData : CSSDataV1 = {
 		},
 		{
 			"name": "margin-top",
-			"values": [
-				{
-					"name": "auto"
-				}
-			],
-			"syntax": "<length> | <percentage> | auto",
+			"values": [],
+			"syntax": "<length> | <percentage>",
 			"relevance": 95,
 			"references": [
 				{
@@ -1324,20 +1187,16 @@ export const cssData : CSSDataV1 = {
 			"name": "max-height",
 			"values": [
 				{
-					"name": "none",
-					"description": "No limit on the height of the box."
+					"name": "fit-children",
+					"description": "(default) Panel size is set to the required size of all children. Can be specified in pixels or percentage."
 				},
 				{
-					"name": "fit-content",
-					"description": "Use the fit-content inline size or fit-content block size, as appropriate to the writing mode."
+					"name": "fill-parent-flow()",
+					"description": "(default) Fills to remaining parent height. If multiple children are set to this value, weight is used to determine final height."
 				},
 				{
-					"name": "max-content",
-					"description": "Use the max-content inline size or max-content block size, as appropriate to the writing mode."
-				},
-				{
-					"name": "min-content",
-					"description": "Use the min-content inline size or min-content block size, as appropriate to the writing mode."
+					"name": "width-percentage()",
+					"description": "(default) Percentage of the panel's width, which allows you to enforce a particular aspect ratio."
 				}
 			],
 			"syntax": "<viewport-length>",
@@ -1358,20 +1217,16 @@ export const cssData : CSSDataV1 = {
 			"name": "max-width",
 			"values": [
 				{
-					"name": "none",
-					"description": "No limit on the width of the box."
+					"name": "fit-children",
+					"description": "(default) Panel size is set to the required size of all children. Can be specified in pixels or percentage."
 				},
 				{
-					"name": "fit-content",
-					"description": "Use the fit-content inline size or fit-content block size, as appropriate to the writing mode."
+					"name": "fill-parent-flow()",
+					"description": "(default) Fills to remaining parent height. If multiple children are set to this value, weight is used to determine final height."
 				},
 				{
-					"name": "max-content",
-					"description": "Use the max-content inline size or max-content block size, as appropriate to the writing mode."
-				},
-				{
-					"name": "min-content",
-					"description": "Use the min-content inline size or min-content block size, as appropriate to the writing mode."
+					"name": "height-percentage()",
+					"description": "(default) Percentage of the panel's height, which allows you to enforce a particular aspect ratio."
 				}
 			],
 			"syntax": "<viewport-length>",
@@ -1392,19 +1247,16 @@ export const cssData : CSSDataV1 = {
 			"name": "min-height",
 			"values": [
 				{
-					"name": "auto"
+					"name": "fit-children",
+					"description": "(default) Panel size is set to the required size of all children. Can be specified in pixels or percentage."
 				},
 				{
-					"name": "fit-content",
-					"description": "Use the fit-content inline size or fit-content block size, as appropriate to the writing mode."
+					"name": "fill-parent-flow()",
+					"description": "(default) Fills to remaining parent height. If multiple children are set to this value, weight is used to determine final height."
 				},
 				{
-					"name": "max-content",
-					"description": "Use the max-content inline size or max-content block size, as appropriate to the writing mode."
-				},
-				{
-					"name": "min-content",
-					"description": "Use the min-content inline size or min-content block size, as appropriate to the writing mode."
+					"name": "width-percentage()",
+					"description": "(default) Percentage of the panel's width, which allows you to enforce a particular aspect ratio."
 				}
 			],
 			"syntax": "<viewport-length>",
@@ -1425,19 +1277,16 @@ export const cssData : CSSDataV1 = {
 			"name": "min-width",
 			"values": [
 				{
-					"name": "auto"
+					"name": "fit-children",
+					"description": "(default) Panel size is set to the required size of all children. Can be specified in pixels or percentage."
 				},
 				{
-					"name": "fit-content",
-					"description": "Use the fit-content inline size or fit-content block size, as appropriate to the writing mode."
+					"name": "fill-parent-flow()",
+					"description": "(default) Fills to remaining parent height. If multiple children are set to this value, weight is used to determine final height."
 				},
 				{
-					"name": "max-content",
-					"description": "Use the max-content inline size or max-content block size, as appropriate to the writing mode."
-				},
-				{
-					"name": "min-content",
-					"description": "Use the min-content inline size or min-content block size, as appropriate to the writing mode."
+					"name": "height-percentage()",
+					"description": "(default) Percentage of the panel's height, which allows you to enforce a particular aspect ratio."
 				}
 			],
 			"syntax": "<viewport-length>",
@@ -1458,23 +1307,23 @@ export const cssData : CSSDataV1 = {
 			"name": "overflow",
 			"values": [
 				{
-					"name": "auto",
-					"description": "The behavior of the 'auto' value is UA-dependent, but should cause a scrolling mechanism to be provided for overflowing boxes."
+					"name": "squish",
+					"description": "(default) Children are squished to fit within the panel's bounds if needed."
 				},
 				{
-					"name": "hidden",
-					"description": "Content is clipped and no scrolling mechanism should be provided to view the content outside the clipping region."
+					"name": "clip",
+					"description": "Children maintain their desired size but their contents are clipped."
 				},
 				{
 					"name": "scroll",
-					"description": "Content is clipped and if the user agent uses a scrolling mechanism that is visible on the screen (such as a scroll bar or a panner), that mechanism should be displayed for a box whether or not any of its content is clipped."
+					"description": "Children maintain their desired size and a scrollbar is added to this panel."
 				},
 				{
-					"name": "visible",
-					"description": "Content is not clipped, i.e., it may be rendered outside the content box."
+					"name": "noclip",
+					"description": "Children maintain their desired size and content is allowed to overflow this panel."
 				}
 			],
-			"syntax": "[ visible | hidden | clip | scroll | auto ]{1,2}",
+			"syntax": "[ squish | clip | scroll | noclip ]{1,2}",
 			"relevance": 93,
 			"references": [
 				{
@@ -1570,13 +1419,8 @@ export const cssData : CSSDataV1 = {
 		},
 		{
 			"name": "perspective",
-			"values": [
-				{
-					"name": "none",
-					"description": "No perspective transform is applied."
-				}
-			],
-			"syntax": "none | <length>",
+			"values": [],
+			"syntax": "<number> | <length>",
 			"relevance": 55,
 			"references": [
 				{
@@ -1586,8 +1430,8 @@ export const cssData : CSSDataV1 = {
 			],
 			"description": "Applies the same transform as the perspective(<number>) transform function, except that it applies only to the positioned or transformed children of the element, not to the transform on the element itself.",
 			"restrictions": [
-				"length",
-				"enum"
+				"number",
+				"length"
 			]
 		},
 		{
@@ -1609,29 +1453,8 @@ export const cssData : CSSDataV1 = {
 		},
 		{
 			"name": "position",
-			"values": [
-				{
-					"name": "absolute",
-					"description": "The box's position (and possibly size) is specified with the 'top', 'right', 'bottom', and 'left' properties. These properties specify offsets with respect to the box's 'containing block'."
-				},
-				{
-					"name": "fixed",
-					"description": "The box's position is calculated according to the 'absolute' model, but in addition, the box is fixed with respect to some reference. As with the 'absolute' model, the box's margins do not collapse with any other margins."
-				},
-				{
-					"name": "relative",
-					"description": "The box's position is calculated according to the normal flow (this is called the position in normal flow). Then the box is offset relative to its normal position."
-				},
-				{
-					"name": "static",
-					"description": "The box is a normal box, laid out according to the normal flow. The 'top', 'right', 'bottom', and 'left' properties do not apply."
-				},
-				{
-					"name": "sticky",
-					"description": "The box's position is calculated according to the normal flow. Then the box is offset relative to its flow root and containing block and in all cases, including table elements, does not affect the position of any following boxes."
-				}
-			],
-			"syntax": "static | relative | absolute | sticky | fixed",
+			"values": [],
+			"syntax": "<length> | <percentage>{3}",
 			"relevance": 96,
 			"references": [
 				{
@@ -1639,9 +1462,11 @@ export const cssData : CSSDataV1 = {
 					"url": "https://developer.mozilla.org/docs/Web/CSS/position"
 				}
 			],
-			"description": "The position CSS property sets how an element is positioned in a document. The top, right, bottom, and left properties determine the final location of positioned elements.",
+			"description": "Sets the x, y, and z position for a panel, in pixels or percentage. Must not be in a flowing layout.",
 			"restrictions": [
-				"enum"
+				"number",
+				"length",
+				"percentage"
 			]
 		},
 		{
@@ -1649,30 +1474,18 @@ export const cssData : CSSDataV1 = {
 			"values": [
 				{
 					"name": "center",
-					"description": "The inline contents are centered within the line box."
-				},
-				{
-					"name": "end",
-					"description": "The inline contents are aligned to the end edge of the line box."
-				},
-				{
-					"name": "justify",
-					"description": "The text is justified according to the method specified by the 'text-justify' property."
+					"description": "The inline contents are centered within the panel."
 				},
 				{
 					"name": "left",
-					"description": "The inline contents are aligned to the left edge of the line box. In vertical text, 'left' aligns to the edge of the line box that would be the start edge for left-to-right text."
+					"description": "The inline contents are aligned to the left edge of the panel."
 				},
 				{
 					"name": "right",
-					"description": "The inline contents are aligned to the right edge of the line box. In vertical text, 'right' aligns to the edge of the line box that would be the end edge for left-to-right text."
-				},
-				{
-					"name": "start",
-					"description": "The inline contents are aligned to the start edge of the line box."
+					"description": "The inline contents are aligned to the right edge of the panel."
 				}
 			],
-			"syntax": "start | end | left | right | center | justify | match-parent",
+			"syntax": "left | right | center",
 			"relevance": 94,
 			"references": [
 				{
@@ -1689,43 +1502,19 @@ export const cssData : CSSDataV1 = {
 			"name": "text-decoration",
 			"values": [
 				{
-					"name": "dashed",
-					"description": "Produces a dashed line style."
-				},
-				{
-					"name": "dotted",
-					"description": "Produces a dotted line."
-				},
-				{
-					"name": "double",
-					"description": "Produces a double line."
-				},
-				{
-					"name": "line-through",
-					"description": "Each line of text has a line through the middle."
-				},
-				{
 					"name": "none",
 					"description": "Produces no line."
-				},
-				{
-					"name": "overline",
-					"description": "Each line of text has a line above it."
-				},
-				{
-					"name": "solid",
-					"description": "Produces a solid line."
 				},
 				{
 					"name": "underline",
 					"description": "Each line of text is underlined."
 				},
 				{
-					"name": "wavy",
-					"description": "Produces a wavy line."
+					"name": "line-through",
+					"description": "Each line of text has a line through the middle."
 				}
 			],
-			"syntax": "<'text-decoration-line'> || <'text-decoration-style'> || <'text-decoration-color'> || <'text-decoration-thickness'>",
+			"syntax": "none | underline | line-through",
 			"relevance": 92,
 			"references": [
 				{
@@ -1735,8 +1524,7 @@ export const cssData : CSSDataV1 = {
 			],
 			"description": "Decorations applied to font used for an element's text.",
 			"restrictions": [
-				"enum",
-				"color"
+				"enum"
 			]
 		},
 		{
@@ -1748,10 +1536,18 @@ export const cssData : CSSDataV1 = {
 				},
 				{
 					"name": "ellipsis",
-					"description": "Render an ellipsis character (U+2026) to represent clipped inline content."
+					"description": "Render an ellipsis (...) to represent clipped inline content."
+				},
+				{
+					"name": "shrink",
+					"description": "Lower font size to fit inline content."
+				},
+				{
+					"name": "noclip",
+					"description": "Allows the text to overflow based on the overflow style."
 				}
 			],
-			"syntax": "[ clip | ellipsis | <string> ]{1,2}",
+			"syntax": "clip | ellipsis | shrink | noclip",
 			"relevance": 82,
 			"references": [
 				{
@@ -1761,8 +1557,7 @@ export const cssData : CSSDataV1 = {
 			],
 			"description": "Text can overflow for example when it is prevented from wrapping.",
 			"restrictions": [
-				"enum",
-				"string"
+				"enum"
 			]
 		},
 		{
@@ -1781,7 +1576,7 @@ export const cssData : CSSDataV1 = {
 					"url": "https://developer.mozilla.org/docs/Web/CSS/text-shadow"
 				}
 			],
-			"description": "Enables shadow effects to be applied to the text of the element.",
+			"description": "Specifies text shadows. The shadow shape will match the text the panel can generate,and this is only meaningful for labels.",
 			"restrictions": [
 				"length",
 				"color"
@@ -1790,10 +1585,6 @@ export const cssData : CSSDataV1 = {
 		{
 			"name": "text-transform",
 			"values": [
-				{
-					"name": "capitalize",
-					"description": "Puts the first typographic letter unit of each word in titlecase."
-				},
 				{
 					"name": "lowercase",
 					"description": "Puts all letters in lowercase."
@@ -1807,7 +1598,7 @@ export const cssData : CSSDataV1 = {
 					"description": "Puts all letters in uppercase."
 				}
 			],
-			"syntax": "none | capitalize | uppercase | lowercase | full-width | full-size-kana",
+			"syntax": "none | uppercase | lowercase",
 			"relevance": 86,
 			"references": [
 				{
@@ -1824,23 +1615,7 @@ export const cssData : CSSDataV1 = {
 			"name": "transform",
 			"values": [
 				{
-					"name": "matrix()",
-					"description": "Specifies a 2D transformation in the form of a transformation matrix of six values. matrix(a,b,c,d,e,f) is equivalent to applying the transformation matrix [a b c d e f]"
-				},
-				{
-					"name": "matrix3d()",
-					"description": "Specifies a 3D transformation as a 4x4 homogeneous matrix of 16 values in column-major order."
-				},
-				{
 					"name": "none"
-				},
-				{
-					"name": "perspective()",
-					"description": "Specifies a perspective projection matrix."
-				},
-				{
-					"name": "rotate()",
-					"description": "Specifies a 2D rotation by the angle specified in the parameter about the origin of the element, as defined by the transform-origin property."
 				},
 				{
 					"name": "rotate3d()",
@@ -1859,10 +1634,6 @@ export const cssData : CSSDataV1 = {
 					"description": "Specifies a clockwise rotation by the given angle about the Z axis."
 				},
 				{
-					"name": "scale()",
-					"description": "Specifies a 2D scale operation by the [sx,sy] scaling vector described by the 2 parameters. If the second parameter is not provided, it is takes a value equal to the first."
-				},
-				{
 					"name": "scale3d()",
 					"description": "Specifies a 3D scale operation by the [sx,sy,sz] scaling vector described by the 3 parameters."
 				},
@@ -1877,22 +1648,6 @@ export const cssData : CSSDataV1 = {
 				{
 					"name": "scaleZ()",
 					"description": "Specifies a scale operation using the [1,1,sz] scaling vector, where sz is given as the parameter."
-				},
-				{
-					"name": "skew()",
-					"description": "Specifies a skew transformation along the X and Y axes. The first angle parameter specifies the skew on the X axis. The second angle parameter specifies the skew on the Y axis. If the second parameter is not given then a value of 0 is used for the Y angle (ie: no skew on the Y axis)."
-				},
-				{
-					"name": "skewX()",
-					"description": "Specifies a skew transformation along the X axis by the given angle."
-				},
-				{
-					"name": "skewY()",
-					"description": "Specifies a skew transformation along the Y axis by the given angle."
-				},
-				{
-					"name": "translate()",
-					"description": "Specifies a 2D translation by the vector [tx, ty], where tx is the first translation-value parameter and ty is the optional second translation-value parameter."
 				},
 				{
 					"name": "translate3d()",
@@ -1926,7 +1681,7 @@ export const cssData : CSSDataV1 = {
 		},
 		{
 			"name": "transform-origin",
-			"syntax": "[ <length-percentage> | left | center | right | top | bottom ] | [ [ <length-percentage> | left | center | right ] && [ <length-percentage> | top | center | bottom ] ] <length>?",
+			"syntax": "<length-percentage> <length-percentage>",
 			"relevance": 77,
 			"references": [
 				{
@@ -1936,7 +1691,6 @@ export const cssData : CSSDataV1 = {
 			],
 			"description": "Establishes the origin of transformation for an element.",
 			"restrictions": [
-				"position",
 				"length",
 				"percentage"
 			]
@@ -1945,15 +1699,11 @@ export const cssData : CSSDataV1 = {
 			"name": "transition",
 			"values": [
 				{
-					"name": "all",
-					"description": "Every property that is able to undergo a transition will do so."
-				},
-				{
 					"name": "none",
 					"description": "No property will transition."
 				}
 			],
-			"syntax": "<single-transition>#",
+			"syntax": "none | <single-transition>#",
 			"relevance": 89,
 			"references": [
 				{
@@ -2003,10 +1753,6 @@ export const cssData : CSSDataV1 = {
 			"name": "transition-property",
 			"values": [
 				{
-					"name": "all",
-					"description": "Every property that is able to undergo a transition will do so."
-				},
-				{
 					"name": "none",
 					"description": "No property will transition."
 				}
@@ -2043,43 +1789,27 @@ export const cssData : CSSDataV1 = {
 			"name": "vertical-align",
 			"values": [
 				{
-					"name": "auto",
-					"description": "Align the dominant baseline of the parent box with the equivalent, or heuristically reconstructed, baseline of the element inline box."
-				},
-				{
-					"name": "baseline",
-					"description": "Align the 'alphabetic' baseline of the element with the 'alphabetic' baseline of the parent element."
-				},
-				{
 					"name": "bottom",
-					"description": "Align the after edge of the extended inline box with the after-edge of the line box."
+					"description": "Align the bottom edge of the extended inline box with the bottom-edge of the line box."
+				},
+				{
+					"name": "center",
+					"description": "Align the center baseline of the inline element with the center baseline of the parent."
+				},
+				{
+					"name": "center_nopixelsnap",
+					"description": "Align the center baseline of the inline element with the center baseline of the parent, but does not round to an integer (pixel)."
 				},
 				{
 					"name": "middle",
-					"description": "Align the 'middle' baseline of the inline element with the middle baseline of the parent."
-				},
-				{
-					"name": "sub",
-					"description": "Lower the baseline of the box to the proper position for subscripts of the parent's box. (This value has no effect on the font size of the element's text.)"
-				},
-				{
-					"name": "super",
-					"description": "Raise the baseline of the box to the proper position for superscripts of the parent's box. (This value has no effect on the font size of the element's text.)"
-				},
-				{
-					"name": "text-bottom",
-					"description": "Align the bottom of the box with the after-edge of the parent element's font."
-				},
-				{
-					"name": "text-top",
-					"description": "Align the top of the box with the before-edge of the parent element's font."
+					"description": "Align the center baseline of the inline element with the center baseline of the parent."
 				},
 				{
 					"name": "top",
-					"description": "Align the before edge of the extended inline box with the before-edge of the line box."
+					"description": "Align the top edge of the extended inline box with the top-edge of the line box."
 				}
 			],
-			"syntax": "baseline | sub | super | text-top | text-bottom | middle | top | bottom | <percentage> | <length>",
+			"syntax": "bottom | center | center_nopixelsnap | middle | top",
 			"relevance": 92,
 			"references": [
 				{
@@ -2098,18 +1828,14 @@ export const cssData : CSSDataV1 = {
 			"values": [
 				{
 					"name": "collapse",
-					"description": "Table-specific. If used on elements other than rows, row groups, columns, or column groups, 'collapse' has the same meaning as 'hidden'."
-				},
-				{
-					"name": "hidden",
-					"description": "The generated box is invisible (fully transparent, nothing is drawn), but still affects layout."
+					"description": "Panel is invisible and not included in layout (does not keep its dimensions)."
 				},
 				{
 					"name": "visible",
-					"description": "The generated box is visible."
+					"description": "(default) Panel is visible and included in layout."
 				}
 			],
-			"syntax": "visible | hidden | collapse",
+			"syntax": "visible | collapse",
 			"relevance": 88,
 			"references": [
 				{
@@ -2132,21 +1858,9 @@ export const cssData : CSSDataV1 = {
 				{
 					"name": "nowrap",
 					"description": "Sets 'white-space-collapsing' to 'collapse' and 'text-wrap' to 'none'."
-				},
-				{
-					"name": "pre",
-					"description": "Sets 'white-space-collapsing' to 'preserve' and 'text-wrap' to 'none'."
-				},
-				{
-					"name": "pre-line",
-					"description": "Sets 'white-space-collapsing' to 'preserve-breaks' and 'text-wrap' to 'normal'."
-				},
-				{
-					"name": "pre-wrap",
-					"description": "Sets 'white-space-collapsing' to 'preserve' and 'text-wrap' to 'normal'."
 				}
 			],
-			"syntax": "normal | pre | nowrap | pre-wrap | pre-line | break-spaces",
+			"syntax": "normal | nowrap",
 			"relevance": 90,
 			"references": [
 				{
@@ -2163,23 +1877,19 @@ export const cssData : CSSDataV1 = {
 			"name": "width",
 			"values": [
 				{
-					"name": "auto",
-					"description": "The width depends on the values of other properties."
+					"name": "fit-children",
+					"description": "(default) Panel size is set to the required size of all children. Can be specified in pixels or percentage."
 				},
 				{
-					"name": "fit-content",
-					"description": "Use the fit-content inline size or fit-content block size, as appropriate to the writing mode."
+					"name": "fill-parent-flow()",
+					"description": "(default) Fills to remaining parent height. If multiple children are set to this value, weight is used to determine final height."
 				},
 				{
-					"name": "max-content",
-					"description": "Use the max-content inline size or max-content block size, as appropriate to the writing mode."
-				},
-				{
-					"name": "min-content",
-					"description": "Use the min-content inline size or min-content block size, as appropriate to the writing mode."
+					"name": "height-percentage()",
+					"description": "(default) Percentage of the panel's height, which allows you to enforce a particular aspect ratio."
 				}
 			],
-			"syntax": "<viewport-length>{1,2}",
+			"syntax": "<viewport-length>",
 			"relevance": 96,
 			"references": [
 				{
@@ -2195,13 +1905,8 @@ export const cssData : CSSDataV1 = {
 		},
 		{
 			"name": "z-index",
-			"values": [
-				{
-					"name": "auto",
-					"description": "The stack level of the generated box in the current stacking context is 0. The box does not establish a new stacking context unless it is the root element."
-				}
-			],
-			"syntax": "auto | <integer>",
+			"values": [],
+			"syntax": "<integer>",
 			"relevance": 92,
 			"references": [
 				{

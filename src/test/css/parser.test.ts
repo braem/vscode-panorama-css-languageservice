@@ -47,28 +47,18 @@ suite('CSS - Parser', () => {
 
 	test('stylesheet', function () {
 		let parser = new Parser();
-		assertNode('@charset "demo" ;', parser, parser._parseStylesheet.bind(parser));
-		assertNode('body { margin: 0px; padding: 3em, 6em; }', parser, parser._parseStylesheet.bind(parser));
+		assertNode('body { margin: 0px; padding: 3px, 6px; }', parser, parser._parseStylesheet.bind(parser));
 		assertNode('--> <!--', parser, parser._parseStylesheet.bind(parser));
 		assertNode('', parser, parser._parseStylesheet.bind(parser));
 		assertNode('<!-- --> @import "string"; <!-- -->', parser, parser._parseStylesheet.bind(parser));
-		assertNode('@media asdsa { } <!-- --> <!-- -->', parser, parser._parseStylesheet.bind(parser));
-		assertNode('@media screen, projection { }', parser, parser._parseStylesheet.bind(parser));
 		assertNode('#boo, far {} \n.far boo {}', parser, parser._parseStylesheet.bind(parser));
-		assertNode('@page { margin: 2.5cm; }', parser, parser._parseStylesheet.bind(parser));
 		assertNode('@font-face { font-family: "Example Font"; }', parser, parser._parseStylesheet.bind(parser));
-		assertNode('@namespace "http://www.w3.org/1999/xhtml";', parser, parser._parseStylesheet.bind(parser));
-		assertNode('@namespace pref url(http://test);', parser, parser._parseStylesheet.bind(parser));
 		assertNode('E E[foo] E[foo="bar"] E[foo~="bar"] E[foo^="bar"] E[foo$="bar"] E[foo*="bar"] E[foo|="en"] {}', parser, parser._parseStylesheet.bind(parser));
 		assertNode('input[type=\"submit\"] {}', parser, parser._parseStylesheet.bind(parser));
 		assertNode('E:root E:nth-child(n) E:nth-last-child(n) E:nth-of-type(n) E:nth-last-of-type(n) E:first-child E:last-child {}', parser, parser._parseStylesheet.bind(parser));
 		assertNode('E:first-of-type E:last-of-type E:only-child E:only-of-type E:empty E:link E:visited E:active E:hover E:focus E:target E:lang(fr) E:enabled E:disabled E:checked {}', parser, parser._parseStylesheet.bind(parser));
 		assertNode('E::first-line E::first-letter E::before E::after {}', parser, parser._parseStylesheet.bind(parser));
 		assertNode('E.warning E#myid E:not(s) {}', parser, parser._parseStylesheet.bind(parser));
-		assertError('@namespace;', parser, parser._parseStylesheet.bind(parser), ParseError.URIExpected);
-		assertError('@namespace url(http://test)', parser, parser._parseStylesheet.bind(parser), ParseError.SemiColonExpected);
-		assertError('@charset;', parser, parser._parseStylesheet.bind(parser), ParseError.IdentifierExpected);
-		assertError('@charset \'utf8\'', parser, parser._parseStylesheet.bind(parser), ParseError.SemiColonExpected);
 	});
 
 	test('stylesheet - graceful handling of unknown rules', function () {
@@ -210,24 +200,6 @@ suite('CSS - Parser', () => {
 		assertNode('somename', parser, parser._parseMedium.bind(parser));
 		assertNode('-asdas', parser, parser._parseMedium.bind(parser));
 		assertNode('-asda34s', parser, parser._parseMedium.bind(parser));
-	});
-
-	test('@page', function () {
-		let parser = new Parser();
-		assertNode('@page : name{ }', parser, parser._parsePage.bind(parser));
-		assertNode('@page :left, :right { }', parser, parser._parsePage.bind(parser));
-		assertNode('@page : name{ some : "asdas" }', parser, parser._parsePage.bind(parser));
-		assertNode('@page : name{ some : "asdas" !important }', parser, parser._parsePage.bind(parser));
-		assertNode('@page : name{ some : "asdas" !important; some : "asdas" !important }', parser, parser._parsePage.bind(parser));
-		assertNode('@page rotated { size : landscape }', parser, parser._parsePage.bind(parser));
-		assertNode('@page :left { margin-left: 4cm; margin-right: 3cm; }', parser, parser._parsePage.bind(parser));
-		assertNode('@page {  @top-right-corner { content: url(foo.png); border: solid green; } }', parser, parser._parsePage.bind(parser));
-		assertNode('@page {  @top-left-corner { content: " "; border: solid green; } @bottom-right-corner { content: counter(page); border: solid green; } }', parser, parser._parsePage.bind(parser));
-		assertError('@page {  @top-left-corner foo { content: " "; border: solid green; } }', parser, parser._parsePage.bind(parser), ParseError.LeftCurlyExpected);
-		// assertError('@page {  @XY foo { content: " "; border: solid green; } }', parser, parser._parsePage.bind(parser), ParseError.UnknownAtRule);
-		assertError('@page :left { margin-left: 4cm margin-right: 3cm; }', parser, parser._parsePage.bind(parser), ParseError.SemiColonExpected);
-		assertError('@page : { }', parser, parser._parsePage.bind(parser), ParseError.IdentifierExpected);
-		assertError('@page :left, { }', parser, parser._parsePage.bind(parser), ParseError.IdentifierExpected);
 	});
 
 	test('pseudo page', function () {

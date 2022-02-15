@@ -659,7 +659,6 @@ export const cssData : CSSDataV1 = {
 		},
 		{
 			"name": "border-color",
-			"values": [],
 			"syntax": "<color>{1,4}",
 			"relevance": 87,
 			"references": [
@@ -859,7 +858,6 @@ export const cssData : CSSDataV1 = {
 		},
 		{
 			"name": "border-style",
-			"values": [],
 			"syntax": "<line-style>{1,4}",
 			"relevance": 81,
 			"references": [
@@ -999,7 +997,6 @@ export const cssData : CSSDataV1 = {
 		},
 		{
 			"name": "border-width",
-			"values": [],
 			"syntax": "<line-width>{1,4}",
 			"relevance": 82,
 			"references": [
@@ -1959,7 +1956,6 @@ export const cssData : CSSDataV1 = {
 		},
 		{
 			"name": "padding",
-			"values": [],
 			"syntax": "[ <length> | <percentage> ]{1,4}",
 			"relevance": 96,
 			"references": [
@@ -2060,7 +2056,6 @@ export const cssData : CSSDataV1 = {
 		},
 		{
 			"name": "perspective",
-			"values": [],
 			"syntax": "<number> | <length>",
 			"relevance": 55,
 			"references": [
@@ -2102,7 +2097,6 @@ export const cssData : CSSDataV1 = {
 		},
 		{
 			"name": "position",
-			"values": [],
 			"syntax": "<length> | <percentage>{3}",
 			"relevance": 96,
 			"references": [
@@ -2936,7 +2930,6 @@ export const cssData : CSSDataV1 = {
 		},
 		{
 			"name": "z-index",
-			"values": [],
 			"syntax": "<integer>",
 			"relevance": 92,
 			"references": [

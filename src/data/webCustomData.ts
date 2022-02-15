@@ -2947,6 +2947,16 @@ export const cssData : CSSDataV1 = {
 	],
 	"atDirectives": [
 		{
+			"name": "@define",
+			"references": [
+				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#Definitions"
+				}
+			],
+			"description": "Defines a variable in CSS. Deprecated over variables if using SCSS."
+		},
+		{
 			"name": "@keyframes",
 			"references": [
 				{

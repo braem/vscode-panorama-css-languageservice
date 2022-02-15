@@ -30,7 +30,7 @@ suite('CSS Hover', () => {
 			contents: {
 				kind: 'markdown',
 				value:
-					"Sets the color of an element's text\n\nSyntax: &lt;color&gt;\n\n[VDC Reference](https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#color) | [MDN Reference](https://developer.mozilla.org/docs/Web/CSS/color)"
+					"Sets the foreground fill color/gradient/combination for a panel\\. This color is the color used to render text within the panel\\.\n\nSyntax: &lt;color&gt;\n\n[VDC Reference](https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#color) | [MDN Reference](https://developer.mozilla.org/docs/Web/CSS/color)"
 			}
 		});
 		assertHover('.test { |color: blue; }', {
@@ -44,7 +44,7 @@ suite('CSS Hover', () => {
 			contents: {
 				kind: 'markdown',
 				value:
-					"Sets the color of an element's text\n\nSyntax: &lt;color&gt;"
+					"Sets the foreground fill color/gradient/combination for a panel\\. This color is the color used to render text within the panel\\.\n\nSyntax: &lt;color&gt;"
 			}
 		}, undefined, { references: false });
 

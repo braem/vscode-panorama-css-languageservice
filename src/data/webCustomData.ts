@@ -13,7 +13,8 @@ export const cssData : CSSDataV1 = {
 			"name": "-s2-mix-blend-mode",
 			"values": [
 				{
-					"name": "normal"
+					"name": "normal",
+					"description": "With alpha blending"
 				},
 				{
 					"name": "multiply"
@@ -43,7 +44,7 @@ export const cssData : CSSDataV1 = {
 					"url": "https://developer.mozilla.org/docs/Web/CSS/mix-blend-mode"
 				}
 			],
-			"description": "Controls blending mode for the panel. See CSS mix-blend-mode docs on web, except normal for us is with alpha blending.",
+			"description": "Controls blending mode for the panel.",
 			"restrictions": [
 				"enum"
 			]
@@ -80,7 +81,7 @@ export const cssData : CSSDataV1 = {
 					"description": "Align the right edge of the extended inline box with the right-edge of the line box."
 				}
 			],
-			"syntax": "(left | right | center | middle | center_nopixelsnap) (bottom | top | center | middle | center_nopixelsnap)",
+			"syntax": "<horizontal-align> <vertical-align>",
 			"relevance": 92,
 			"references": [
 				{
@@ -468,7 +469,7 @@ export const cssData : CSSDataV1 = {
 			"values": [
 				{
 					"name": "auto",
-					"description": "Resolved by using the image’s intrinsic ratio and the size of the other dimension, or failing that, using the image’s intrinsic size, or failing that, treating it as 100%."
+					"description": "Preserves the image's aspect ratio."
 				}
 			],
 			"syntax": "<bg-size>#",
@@ -1023,6 +1024,10 @@ export const cssData : CSSDataV1 = {
 					"description": "Changes the drop shadow from an outer shadow (one that shadows the box onto the canvas, as if it were lifted above the canvas) to an inner shadow (one that shadows the canvas onto the box, as if the box were cut out of the canvas and shifted behind it)."
 				},
 				{
+					"name": "filled",
+					"description": "Normal box shadow but filled."
+				},
+				{
 					"name": "none",
 					"description": "No shadow."
 				}
@@ -1065,10 +1070,6 @@ export const cssData : CSSDataV1 = {
 			"name": "clip",
 			"values": [
 				{
-					"name": "auto",
-					"description": "The element does not clip."
-				},
-				{
 					"name": "rect()",
 					"description": "Specifies offsets from the edges of the border box."
 				},
@@ -1077,7 +1078,7 @@ export const cssData : CSSDataV1 = {
 					"description": "Specifies offsets from the edges of the border box in a radius, which takes a center point, start angle and angular width of the revealed sector."
 				}
 			],
-			"syntax": "<shape> | auto",
+			"syntax": "<shape>",
 			"relevance": 74,
 			"references": [
 				{
@@ -1089,7 +1090,7 @@ export const cssData : CSSDataV1 = {
 					"url": "https://developer.mozilla.org/docs/Web/CSS/clip"
 				}
 			],
-			"description": "Deprecated. Use the 'clip-path' property when support allows. Defines the visible portion of an element’s box.",
+			"description": "Specifies a clip region within the panel, where contents will be clipped at render time. This clipping has no impact on layout, and is fast and supported for transitions/animations.",
 			"restrictions": [
 				"enum"
 			]
@@ -1108,7 +1109,7 @@ export const cssData : CSSDataV1 = {
 					"url": "https://developer.mozilla.org/docs/Web/CSS/color"
 				}
 			],
-			"description": "Sets the color of an element's text",
+			"description": "Sets the foreground fill color/gradient/combination for a panel. This color is the color used to render text within the panel.",
 			"restrictions": [
 				"color"
 			]
@@ -1338,7 +1339,7 @@ export const cssData : CSSDataV1 = {
 					"url": "https://developer.mozilla.org/docs/Web/CSS/font-size"
 				}
 			],
-			"description": "Indicates the desired height of glyphs from the font. For scalable fonts, the font-size is a scale factor applied to the EM unit of the font. (Note that certain glyphs may bleed outside their EM box.) For non-scalable fonts, the font-size is converted into absolute units and matched against the declared font-size of the font, using the same absolute coordinate space for both of the matched values.",
+			"description": "Indicates the desired height of glyphs from the font.",
 			"restrictions": [
 				"length",
 				"percentage"
@@ -1356,7 +1357,7 @@ export const cssData : CSSDataV1 = {
 					"description": "Selects a face that is classified as 'normal'."
 				}
 			],
-			"syntax": "normal | italic <angle>{0,2}",
+			"syntax": "normal | italic",
 			"relevance": 90,
 			"references": [
 				{
@@ -1368,7 +1369,7 @@ export const cssData : CSSDataV1 = {
 					"url": "https://developer.mozilla.org/docs/Web/CSS/font-style"
 				}
 			],
-			"description": "Allows italic or oblique faces to be selected. Italic forms are generally cursive in nature while oblique faces are typically sloped versions of the regular face.",
+			"description": "Allows italic faces to be selected.",
 			"restrictions": [
 				"enum"
 			]
@@ -1470,7 +1471,7 @@ export const cssData : CSSDataV1 = {
 					"description": "(default) Percentage of the panel's width, which allows you to enforce a particular aspect ratio."
 				}
 			],
-			"syntax": "<viewport-length>{1,2}",
+			"syntax": "<length> | <percentage> | <fit-children> | <fill-parent-flow> | <width-percentage>",
 			"relevance": 96,
 			"references": [
 				{
@@ -1512,7 +1513,7 @@ export const cssData : CSSDataV1 = {
 					"description": "Align the right edge of the extended inline box with the right-edge of the line box."
 				}
 			],
-			"syntax": "<horizontal-align>",
+			"syntax": "center | center_nopixelsnap | middle | left | right",
 			"relevance": 82,
 			"references": [
 				{
@@ -1596,9 +1597,8 @@ export const cssData : CSSDataV1 = {
 					"url": "https://developer.mozilla.org/docs/Web/CSS/line-height"
 				}
 			],
-			"description": "Determines the block-progression dimension of the text content area of an inline box.",
+			"description": "Specifies the line height (distance between top edge of line above and line below) to use for text. By default this is unset and a value that matches the font-size reasonably will be used automatically.",
 			"restrictions": [
-				"number",
 				"length"
 			]
 		},
@@ -1718,7 +1718,7 @@ export const cssData : CSSDataV1 = {
 					"description": "(default) Percentage of the panel's width, which allows you to enforce a particular aspect ratio."
 				}
 			],
-			"syntax": "<viewport-length>",
+			"syntax": "<length> | <percentage> | <fit-children> | <fill-parent-flow> | <width-percentage>",
 			"relevance": 86,
 			"references": [
 				{
@@ -1752,7 +1752,7 @@ export const cssData : CSSDataV1 = {
 					"description": "(default) Percentage of the panel's height, which allows you to enforce a particular aspect ratio."
 				}
 			],
-			"syntax": "<viewport-length>",
+			"syntax": "<length> | <percentage> | <fit-children> | <fill-parent-flow> | <height-percentage>",
 			"relevance": 91,
 			"references": [
 				{
@@ -1786,7 +1786,7 @@ export const cssData : CSSDataV1 = {
 					"description": "(default) Percentage of the panel's width, which allows you to enforce a particular aspect ratio."
 				}
 			],
-			"syntax": "<viewport-length>",
+			"syntax": "<length> | <percentage> | <fit-children> | <fill-parent-flow> | <width-percentage>",
 			"relevance": 90,
 			"references": [
 				{
@@ -1820,7 +1820,7 @@ export const cssData : CSSDataV1 = {
 					"description": "(default) Percentage of the panel's height, which allows you to enforce a particular aspect ratio."
 				}
 			],
-			"syntax": "<viewport-length>",
+			"syntax": "<length> | <percentage> | <fit-children> | <fill-parent-flow> | <height-percentage>",
 			"relevance": 89,
 			"references": [
 				{
@@ -2076,7 +2076,7 @@ export const cssData : CSSDataV1 = {
 		},
 		{
 			"name": "perspective-origin",
-			"syntax": "<position>",
+			"syntax": "<length> | <percentage>{1,2}",
 			"relevance": 51,
 			"references": [
 				{
@@ -2090,7 +2090,6 @@ export const cssData : CSSDataV1 = {
 			],
 			"description": "Establishes the origin for the perspective property. It effectively sets the X and Y position at which the viewer appears to be looking at the children of the element.",
 			"restrictions": [
-				"position",
 				"percentage",
 				"length"
 			]
@@ -2111,7 +2110,6 @@ export const cssData : CSSDataV1 = {
 			],
 			"description": "Sets the x, y, and z position for a panel, in pixels or percentage. Must not be in a flowing layout.",
 			"restrictions": [
-				"number",
 				"length",
 				"percentage"
 			]
@@ -2133,7 +2131,7 @@ export const cssData : CSSDataV1 = {
 		},
 		{
 			"name": "pre-transform-scale2d",
-			"syntax": "<number> [ <number> ]",
+			"syntax": "[ <number> ]{1,2}",
 			"relevance": 51,
 			"references": [
 				{
@@ -2757,8 +2755,7 @@ export const cssData : CSSDataV1 = {
 			],
 			"description": "Affects the vertical positioning of the inline boxes generated by an inline-level element inside a line box.",
 			"restrictions": [
-				"percentage",
-				"length"
+				"enum"
 			]
 		},
 		{
@@ -2865,7 +2862,7 @@ export const cssData : CSSDataV1 = {
 					"description": "(default) Percentage of the panel's height, which allows you to enforce a particular aspect ratio."
 				}
 			],
-			"syntax": "<viewport-length>",
+			"syntax": "<length> | <percentage> | <fit-children> | <fill-parent-flow> | <height-percentage>",
 			"relevance": 96,
 			"references": [
 				{

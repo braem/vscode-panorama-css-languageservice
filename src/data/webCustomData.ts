@@ -2629,6 +2629,10 @@ export const cssData : CSSDataV1 = {
 			"relevance": 64,
 			"references": [
 				{
+					"name": "VDC Reference",
+					"url": "https://developer.valvesoftware.com/wiki/CSGO_Panorama_CSS_Properties#transition-property"
+				},
+				{
 					"name": "MDN Reference",
 					"url": "https://developer.mozilla.org/docs/Web/CSS/transition-property"
 				}

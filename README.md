@@ -1,4 +1,9 @@
-# vscode-css-languageservice
+# vscode-panorama-css-languageservice
+
+This is a fork of Microsoft's vscode-css-languageservice to provide support for Panorama CSS. See [vscode-panorama-css](https://github.com/braem/vscode-panorama-css).
+
+----------------
+
 Language services for CSS, LESS and SCSS
 
 [![npm Package](https://img.shields.io/npm/v/vscode-css-languageservice.svg?style=flat-square)](https://www.npmjs.org/package/vscode-css-languageservice)
